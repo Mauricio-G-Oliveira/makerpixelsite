@@ -53,31 +53,27 @@ makerpixelsite/
 
 ---
 
-## 🚀 Publicação no GitHub Pages
+## 🌐 Site Online no GitHub Pages
 
-Para publicar este site no seu GitHub com GitHub Pages:
+O site está publicado e ativo em produção no endereço oficial:
+👉 **[https://mauricio-g-oliveira.github.io/makerpixelsite/](https://mauricio-g-oliveira.github.io/makerpixelsite/)**
 
-### 1. Criar o repositório no GitHub
-Crie um novo repositório chamado `makerpixelsite` na sua conta do GitHub: [github.com/new](https://github.com/new).
+---
 
-### 2. Conectar e Enviar pelo Terminal
-No diretório deste projeto:
+## 🚀 Como Atualizar o Site Futuramente
+
+Se você fizer alterações locais em arquivos, basta rodar:
 
 ```bash
-git init
-git add .
-git commit -m "feat: Website oficial MakerPixel Techsystem com portfólio e widget WhatsApp"
-git branch -M main
-git remote add origin https://github.com/Mauricio-G-Oliveira/makerpixelsite.git
-git push -u origin main
+./deploy-github.sh
 ```
 
-### 3. Ativar o GitHub Pages
-1. Acesse o seu repositório no GitHub: `https://github.com/Mauricio-G-Oliveira/makerpixelsite/settings/pages`.
-2. Em **Source**, selecione **Deploy from a branch**.
-3. Escolha a branch **main** e a pasta **/(root)**.
-4. Clique em **Save**.
-5. Seu site estará no ar em minutos em: `https://mauricio-g-oliveira.github.io/makerpixelsite/`!
+Ou manualmente:
+```bash
+git add .
+git commit -m "update: melhorias no site"
+git push
+```
 
 ---
 
