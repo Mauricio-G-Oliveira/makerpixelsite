@@ -1,68 +1,65 @@
-# 🚀 MakerPixel Techsystem — Website Oficial
+# 🚀 MakerPixel Techsystem Contábil — Website Oficial
 
-Website institucional e comercial de alta conversão da **MakerPixel Techsystem**, empresa especializada em desenvolvimento de sites, landing pages de alta performance, aplicativos e sistemas web personalizados.
+Portal oficial da **MakerPixel Techsystem**, especializado em tecnologia e engenharia de software para **escritórios de contabilidade** em Tubarão, no Sul de Santa Catarina e em todo o Brasil.
 
-Fundada por **Mauricio Goulart de Oliveira** em Tubarão, Santa Catarina.
+Fundada e desenvolvida por **Mauricio Goulart de Oliveira**.
 
----
-
-## 🌐 Informações de Contato & Redes
-
-- **WhatsApp**: [(48) 98457-0272](https://wa.me/5548984570272)
-- **E-mail**: [mauriciogoulart.deoliveira37@gmail.com](mailto:mauriciogoulart.deoliveira37@gmail.com)
-- **Instagram**: [@makerpixeltech](https://www.instagram.com/makerpixeltech/) (`makepixel web sistem`)
-- **Localização**: Tubarão - Santa Catarina (Atendimento Brasil & Exterior)
-
----
-
-## ✨ Funcionalidades do Website
-
-- **Design Dark Cyber High-Tech**: Identidade visual oficial com tons ciano (`#00A3E0`), marinho (`#0F2B48`) e glassmorphism.
-- **Formulário WhatsApp Flutuante Inteligente**: Widget interativo no canto da tela com avatar do Mauricio, botões de assunto rápido, campos de nome/mensagem e envio instantâneo.
-- **Cases & Projetos Reais**:
-  - **StageFlow**: Plataforma web de gestão para bandas, músicos, repertório e agenda.
-  - **MakerPixel Gestão Financeira & SCI Único**: Conciliação bancária multi-extratos e integração contábil automatizada.
-  - **Banda Livert**: Site oficial com agenda dinâmica, press kit digital e galeria multimídia de shows.
-  - **Landing Pages Cirúrgicas**: Para área médica, comércio e eventos.
-- **História & Valores da Empresa**: Missão, visão e compromisso de entrega.
-- **Simulador Interativo de Orçamento**: O cliente escolhe a solução, módulos desejados e gera a proposta pré-formatada para o WhatsApp.
-- **Visualizador Lightbox**: Permite visualizar prints e fotos em alta definição com um clique.
-
----
-
-## 📁 Estrutura de Arquivos
-
-```
-makerpixelsite/
-├── assets/
-│   ├── css/
-│   │   └── style.css            # Efeitos visuais, glassmorphism e animações
-│   ├── js/
-│   │   └── main.js              # Interações, simulador, lightbox e widget WhatsApp
-│   └── img/
-│       ├── logo.svg             # Logo SVG oficial da MakerPixel Techsystem
-│       ├── favicon.svg          # Favicon oficial
-│       ├── livert/              # Fotos de shows e press kit da Banda Livert
-│       ├── stageflow/           # Logo e visualizer da plataforma StageFlow
-│       ├── posts/               # Mockups e imagens oficiais da MakerPixel
-│       └── wallpapers/          # Imagens de fundo e texturas
-├── index.html                   # Página principal completa e responsiva
-├── .nojekyll                    # Flag para GitHub Pages
-└── README.md                    # Documentação do projeto
-```
+> *"Tecnologia para escritórios de contabilidade. Menos planilha, menos retrabalho, mais tempo para o cliente."*
 
 ---
 
 ## 🌐 Site Online no GitHub Pages
 
-O site está publicado e ativo em produção no endereço oficial:
+O site está publicado e ativo em produção:
 👉 **[https://mauricio-g-oliveira.github.io/makerpixelsite/](https://mauricio-g-oliveira.github.io/makerpixelsite/)**
 
 ---
 
-## 🚀 Como Atualizar o Site Futuramente
+## 🏛️ Arquitetura Multi-Páginas
 
-Se você fizer alterações locais em arquivos, basta rodar:
+Estrutura corporativa multi-páginas de navegação limpa, sem depender de uma landing page única:
+
+- **[`index.html`](index.html)**: Visão geral da plataforma, dores do escritório contábil, números reais e formulário de diagnóstico.
+- **[`modulos.html`](modulos.html)**: Detalhamento de cada módulo, com total transparência técnica do que está pronto (em produção) vs. sob medida ou em breve.
+- **[`como-funciona.html`](como-funciona.html)**: Metodologia de implantação em 4 passos, treinamento da equipe e FAQ contábil aprofundado (SCI Único, conciliação e suporte direto).
+- **[`seguranca.html`](seguranca.html)**: Segurança da informação, controle de acessos por setor (Fiscal, Contábil, Folha, Admin), backups e conformidade estrita com a LGPD.
+- **[`sobre.html`](sobre.html)**: Nossa história em Tubarão/SC, proximidade com a rotina contábil regional e os 3 princípios fundamentais.
+- **[`contato.html`](contato.html)**: Formulário de diagnóstico contábil (nome, escritório, cidade, empresas atendidas, maior gargalo) e canais de atendimento direto.
+- **[`outros-projetos.html`](outros-projetos.html)**: Lab / Projetos externos e paralelos (StageFlow para bandas/músicos e Banda Livert).
+
+---
+
+## 🛠️ Módulos & Destaques
+
+1. **Conciliação Bancária & Importação Multi-Extratos (Pronto para Uso)**:
+   - Suporte a 9+ bancos (Sicoob, Sicredi, Caixa, Banco do Brasil, Itaú, Bradesco, Santander, Inter, etc.).
+   - Leitura de OFX, PDFs bancários, CSV e TXT Sicoob.
+   - Aprendizado automático por CNPJ e histórico padrão.
+2. **Integração com SCI Único (Pronto para Uso)**:
+   - Geração de arquivos oficiais `UNICO_<Unidade>.txt` em UTF-8 com BOM e CRLF (16 colunas separadas por vírgula).
+   - Relatório de conferência `PENDENCIAS_UNICO.csv`.
+3. **Controle de Vencimentos (Em Breve / Fase Piloto)**:
+   - Alvarás da Prefeitura de Tubarão, Bombeiros, Sanitário, CNDs e validade de certificados digitais A1/A3.
+4. **Controle de Entregas por Setor (Em Breve)**:
+   - Acompanhamento de rotinas e obrigações por setor (Fiscal, Contábil, DP).
+5. **Ferramentas Fiscais & Reforma Tributária (Sob Medida)**:
+   - Conferência de ISS e preparação para as regras de IBS/CBS.
+6. **Desenvolvimento Sob Medida**:
+   - Resolução de dores específicas e substituição de planilhas complexas em VBA.
+
+---
+
+## 📞 Canais Oficiais de Contato
+
+- **WhatsApp Direto**: [(48) 98457-0272](https://wa.me/5548984570272) *(Atendimento direto com o desenvolvedor, sem 0800)*
+- **E-mail**: [mauriciogoulart.deoliveira37@gmail.com](mailto:mauriciogoulart.deoliveira37@gmail.com)
+- **Base Operacional**: Tubarão - Santa Catarina
+
+---
+
+## 🔄 Como Atualizar o Site
+
+Para enviar atualizações para o GitHub Pages:
 
 ```bash
 ./deploy-github.sh
@@ -71,7 +68,7 @@ Se você fizer alterações locais em arquivos, basta rodar:
 Ou manualmente:
 ```bash
 git add .
-git commit -m "update: melhorias no site"
+git commit -m "update: melhorias no portal contábil"
 git push
 ```
 

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Funciona & FAQ Contábil | MakerPixel Techsystem</title>
+  
+  <meta name="description" content="Entenda como funciona a implantação, parametrização e suporte direto da MakerPixel para escritórios de contabilidade. Perguntas frequentes sobre o SCI Único e rotina contábil.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00A3E0',
+              hover: '#0284C7',
+              light: '#38BDF8',
+              navy: '#0F2B48',
+              dark: '#070B14',
+              surface: '#0F172A',
+              card: '#131D33',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative flex items-center justify-center p-2 rounded-xl bg-slate-900/80 border border-cyan-500/30 group-hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-950/40">
+            <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-white flex items-center">
+              Maker<span class="text-[#00A3E0] font-black drop-shadow-[0_0_8px_rgba(0,163,224,0.6)]">Pixel</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-cyan-200/80 -mt-1">
+              Techsystem Contábil
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
+          <a href="modulos.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="text-cyan-400 font-bold transition-colors">Como Funciona & FAQ</a>
+          <a href="seguranca.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Segurança & LGPD</a>
+          <a href="sobre.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Sobre Nós</a>
+          <a href="contato.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="contato.html" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Demonstração
+          </a>
+        </div>
+
+        <div class="flex lg:hidden items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="como-funciona.html" class="block text-base font-semibold text-cyan-400">Como Funciona & FAQ</a>
+      <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <div class="pt-4 border-t border-slate-800">
+        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Agendar Demonstração Prática
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="flex-grow pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Cabeçalho -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="tech-tag inline-block">Passo a Passo & Suporte</div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Como funciona a parceria com a MakerPixel
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Sem burocracias, sem contratos de fidelidade abusivos e com suporte direto com quem programa. Veja o caminho da implantação até as respostas para as dúvidas mais comuns dos contadores.
+        </p>
+      </div>
+
+      <!-- ETAPAS DE IMPLANTAÇÃO -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-white">Diagnóstico da Rotina</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Em uma conversa rápida de 30 minutos (online ou presencial em Tubarão e região), mapeamos quais clientes e bancos tomam mais tempo do seu setor contábil.
+          </p>
+          <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
+            Duração: 1 dia
+          </span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-white">Parametrização Ágil</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Configuramos as regras de contrapartida, histórico padrão (HP) e os códigos de unidade do SCI Único conforme o plano de contas adotado pelo escritório.
+          </p>
+          <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
+            Duração: 1 a 3 dias
+          </span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-white">Treinamento Prático</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Realizamos uma sessão prática com a equipe do escritório, importando extratos reais e gerando o lote de teste para importação no sistema contábil.
+          </p>
+          <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
+            Duração: 1 sessão prática
+          </span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg font-mono">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-white">Suporte Direto no WhatsApp</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Durante o fechamento do mês, se surgir qualquer extrato fora do padrão ou dúvida operacional, o contato é direto com Mauricio. Sem 0800.
+          </p>
+          <span class="text-[11px] text-emerald-400 font-semibold block pt-2 border-t border-slate-800">
+            Contínuo & Humanizado
+          </span>
+        </div>
+
+      </div>
+
+      <!-- FAQ DETALHADO DO CONTADOR -->
+      <section class="max-w-4xl mx-auto space-y-8">
+        <div class="text-center space-y-3">
+          <div class="tech-tag inline-block">Dúvidas Frequentes</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Perguntas Frequentes de Escritórios Contábeis
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm">
+            Respostas claras e diretas para as principais dúvidas de sócios e gestores contábeis.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer" open>
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>A MakerPixel substitui o SCI Único, Domínio ou Questor?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                <strong>Não! De forma alguma.</strong> Nós não somos um ERP contábil concorrente.
+              </p>
+              <p>
+                A MakerPixel atua na etapa <em>anterior</em> à escrituração: onde seu analista gasta horas recebendo extratos bagunçados dos clientes, convertendo PDFs e tentando conciliar manualmente. Nós organizamos os dados e geramos os arquivos de lote oficiais no padrão exato que o <strong>SCI Único</strong> importa de forma limpa, rápida e sem erros.
+              </p>
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Quanto tempo leva para implantar e ver resultado?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                A implantação é praticamente imediata. Como o sistema roda em nuvem segura ou diretamente no navegador, em menos de <strong>3 dias úteis</strong> o escritório já está com as contas parametrizadas e processando os primeiros lotes de extratos da competência.
+              </p>
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>E se tivermos um cliente com formato de extrato muito específico ou cooperativa regional?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                Esse é o nosso maior diferencial competitivo: <strong>você fala direto com o desenvolvedor</strong>. 
+              </p>
+              <p>
+                Diferente de grandes fornecedores de software onde você abre um chamado e espera semanas, na MakerPixel ajustamos o leitor do extrato diretamente para acolher o modelo do seu cliente em prazo recorde.
+              </p>
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Como funciona o suporte no dia a dia durante o fechamento de mês?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                O suporte é realizado via canal direto no WhatsApp: <strong>(48) 98457-0272</strong>.
+              </p>
+              <p>
+                Sabemos que o fechamento contábil tem prazos inegociáveis. Se houver qualquer dúvida ou inconsistência na importação, atendemos com prioridade máxima e sem transferir você para filas de espera.
+              </p>
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Como fica a segurança dos dados e o sigilo dos clientes (LGPD)?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                Levamos a segurança e o sigilo a sério. O sistema conta com controle de acesso por níveis de usuário (Operador, Contador/Fiscal e Administrador), criptografia e não comercializa ou expõe dados a terceiros. Conheça nossa política detalhada na página <a href="seguranca.html" class="text-cyan-400 underline font-semibold">Segurança & LGPD</a>.
+              </p>
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Como é o modelo de cobrança?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
+              <p>
+                Trabalhamos com planos dimensionados conforme o porte do escritório e o volume de empresas/contas atendidas, sem custos surpresa por usuário extra e com retorno sobre o investimento visível já no primeiro mês de uso.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 text-center space-y-6">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Ainda ficou com alguma dúvida sobre a rotina contábil?
+        </h3>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto">
+          Vamos bater um papo rápido. Conhecemos a realidade dos escritórios de Tubarão e estamos à disposição para demonstrar a ferramenta.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contato.html" class="w-full sm:w-auto btn-gradient-primary px-8 py-3.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
+            Solicitar Demonstração
+          </a>
+          <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Li%20o%20FAQ%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20espec%C3%ADfica%20do%20meu%20escrit%C3%B3rio." target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-slate-700 hover:border-cyan-400">
+            Falar Diretamente no WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ UNIFICADO -->
+  <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
+            <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
+            <span class="block text-[11px] text-slate-500">Implantação rápida e suporte direto</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
+          <a href="index.html" class="hover:text-cyan-400">Início</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
+          <a href="como-funciona.html" class="text-cyan-400 font-bold">Como Funciona</a>
+          <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
+          <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
+          <a href="contato.html" class="hover:text-cyan-400">Contato</a>
+          <a href="outros-projetos.html" class="text-slate-500 hover:text-slate-300">Outros Projetos</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/5548984570272" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400" title="WhatsApp">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400" title="E-mail">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
+        <p>Atendimento direto ao contador • Sem 0800</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

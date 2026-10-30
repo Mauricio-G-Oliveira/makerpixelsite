@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulos & Soluções Contábeis | MakerPixel Techsystem</title>
+  
+  <meta name="description" content="Conheça os módulos da MakerPixel para escritórios de contabilidade: conciliação bancária de 9+ bancos, integração oficial com SCI Único, controle de vencimentos e ferramentas fiscais.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00A3E0',
+              hover: '#0284C7',
+              light: '#38BDF8',
+              navy: '#0F2B48',
+              dark: '#070B14',
+              surface: '#0F172A',
+              card: '#131D33',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative flex items-center justify-center p-2 rounded-xl bg-slate-900/80 border border-cyan-500/30 group-hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-950/40">
+            <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-white flex items-center">
+              Maker<span class="text-[#00A3E0] font-black drop-shadow-[0_0_8px_rgba(0,163,224,0.6)]">Pixel</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-cyan-200/80 -mt-1">
+              Techsystem Contábil
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
+          <a href="modulos.html" class="text-cyan-400 font-bold transition-colors">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Como Funciona & FAQ</a>
+          <a href="seguranca.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Segurança & LGPD</a>
+          <a href="sobre.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Sobre Nós</a>
+          <a href="contato.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="contato.html" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Demonstração
+          </a>
+        </div>
+
+        <div class="flex lg:hidden items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
+      <a href="modulos.html" class="block text-base font-semibold text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="como-funciona.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Como Funciona & FAQ</a>
+      <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <div class="pt-4 border-t border-slate-800">
+        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Agendar Demonstração Prática
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="flex-grow pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- Cabeçalho da Página -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="tech-tag inline-block">Engenharia Contábil</div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Módulos desenhados para a rotina do contador
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Sem promessas mirabolantes: veja em detalhes quais módulos já estão <strong>em produção prontos para uso</strong> e quais estão em fase piloto ou desenvolvimento sob medida.
+        </p>
+      </div>
+
+      <!-- MÓDULOS DETALHADOS -->
+      <div class="space-y-12">
+        
+        <!-- Módulo 1: Conciliação Bancária (PRONTO) -->
+        <section id="conciliacao" class="glass-card rounded-3xl p-8 sm:p-10 border-cyan-500/30 scroll-mt-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center font-bold">
+                  <i data-lucide="file-check" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 px-3 py-0.5 rounded-full">
+                    Pronto para Uso • Em Produção
+                  </span>
+                  <h2 class="text-2xl font-bold text-white mt-1">Conciliação Bancária & Importação Multi-Extratos</h2>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Elimine o trabalho braçal de conferir extrato por extrato em papel ou PDF. O nosso motor lê arquivos bancários de diferentes instituições e cruza lançamentos automaticamente.
+              </p>
+
+              <div class="space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-cyan-400">Principais Funcionalidades:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Suporte a 9+ bancos brasileiros:</strong> Sicoob, Sicredi, Caixa Econômica, Banco do Brasil, Itaú, Bradesco, Santander, Banco Inter, Nubank e outros.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Múltiplos formatos aceitos:</strong> Arquivos OFX, PDFs bancários nativos, CSV e TXT tabulado padrão Sicoob.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Aprendizado por CNPJ e Histórico:</strong> O sistema memoriza as contas de contrapartida de fornecedores frequentes. Ao classificar uma vez, ele sugere a confirmação em lote das próximas.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Cruzamento com Balancete ou NF-e:</strong> Conferência automática entre o extrato do banco e as parcelas com vencimento no mês.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card de Evidência -->
+            <div class="lg:col-span-5 bg-slate-950/90 rounded-2xl p-6 border border-slate-800 space-y-4">
+              <span class="text-xs font-mono text-cyan-400 block border-b border-slate-800 pb-2">RESUMO DE BENEFÍCIO</span>
+              <div class="space-y-3 text-xs">
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                  <span class="text-slate-400">Tempo médio economizado:</span>
+                  <span class="text-emerald-400 font-bold font-mono">Até 75% por cliente</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                  <span class="text-slate-400">Risco de erro de digitação:</span>
+                  <span class="text-cyan-400 font-bold font-mono">Próximo de zero</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                  <span class="text-slate-400">Exportação rápida:</span>
+                  <span class="text-white font-bold font-mono">Excel (TSV) & CSV</span>
+                </div>
+              </div>
+              <a href="contato.html" class="block text-center btn-gradient-primary py-3 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
+                Ver Demonstração Deste Módulo
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Módulo 2: Integração SCI Único (PRONTO) -->
+        <section id="sci-unico" class="glass-card rounded-3xl p-8 sm:p-10 border-cyan-500/30 scroll-mt-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center font-bold">
+                  <i data-lucide="layers" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 px-3 py-0.5 rounded-full">
+                    Pronto para Uso • Em Produção
+                  </span>
+                  <h2 class="text-2xl font-bold text-white mt-1">Integração Contábil & Geração de Arquivos para o SCI Único</h2>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Desenvolvemos a compatibilidade exata com as regras de importação do <strong>SCI Único</strong>. Chega de converter planilhas manualmente com macros que quebram a cada atualização do Windows.
+              </p>
+
+              <div class="space-y-3 text-xs text-slate-300">
+                <h4 class="font-bold text-white uppercase tracking-wider text-[11px] text-cyan-400">Especificações Técnicas Oficiais:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Layout Oficial UTF-8 com BOM:</strong> Arquivos <code class="text-cyan-300">UNICO_&lt;Unidade&gt;.txt</code> com 16 colunas separadas por vírgula, exatamente como exigido pelo importador padrão do SCI Único.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Relatório de Inconsistências:</strong> Geração instantânea de <code class="text-cyan-300">PENDENCIAS_UNICO.csv</code> indicando se faltou alguma conta débito/crédito antes da tentativa de importação.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span><strong>Distribuição por Unidade e Competência:</strong> Acompanhamento do percentual de conclusão por banco e unidade contábil.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-950/90 rounded-2xl p-6 border border-slate-800 space-y-4">
+              <span class="text-xs font-mono text-cyan-400 block border-b border-slate-800 pb-2">POR QUE NÃO USAR PLANILHA?</span>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                As macros tradicionais em VBA dependem da versão local do Excel, não gravam histórico de alterações e geram arquivos corrompidos se houver caracteres especiais. Nossa ferramenta roda no navegador com segurança e gera arquivos 100% limpos.
+              </p>
+              <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-xs text-slate-300">
+                <span class="text-cyan-300 font-bold block mb-1">Compatibilidade Garantida</span>
+                Totalmente aderente às regras de débito, crédito e histórico padrão (HP).
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Módulo 3: Controle de Vencimentos (EM BREVE) -->
+        <section id="vencimentos" class="glass-card rounded-3xl p-8 sm:p-10 border-slate-800 scroll-mt-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold">
+                  <i data-lucide="calendar" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-950/80 text-amber-300 border border-amber-500/40 px-3 py-0.5 rounded-full">
+                    Em Breve • Fase Piloto
+                  </span>
+                  <h2 class="text-2xl font-bold text-white mt-1">Controle de Vencimentos: Alvarás, CNDs & Certificados</h2>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Um painel centralizado para nunca mais ser surpreendido por um alvará vencido de cliente ou por um certificado digital A1 expirando em pleno fechamento de folha.
+              </p>
+
+              <div class="space-y-2 text-xs text-slate-400">
+                <p>• <strong>Alvarás Municipais:</strong> Particularidades de emissão e renovação da Prefeitura de Tubarão e órgãos regionais do Sul de SC.</p>
+                <p>• <strong>Certidões Negativas de Débito (CND):</strong> Receita Federal, Fazenda Estadual de SC, Prefeituras e FGTS.</p>
+                <p>• <strong>Certificados Digitais (A1 / A3):</strong> Avisos automáticos programados 30, 15 e 5 dias antes da expiração.</p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-950/70 rounded-2xl p-6 border border-slate-800 space-y-3">
+              <span class="text-xs font-mono text-amber-400 block border-b border-slate-800 pb-2">DISPONIBILIDADE</span>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Este módulo está sendo validado em escritórios parceiros pilotos. Quer fazer parte do grupo de escritórios que testam e sugerem melhorias nesta ferramenta?
+              </p>
+              <a href="contato.html" class="inline-block text-xs font-bold text-amber-300 hover:text-white underline">
+                Entrar na lista de escritórios pilotos →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Módulo 4: Workflow & Entregas por Setor (EM BREVE) -->
+        <section id="entregas" class="glass-card rounded-3xl p-8 sm:p-10 border-slate-800 scroll-mt-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold">
+                  <i data-lucide="check-square" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-950/80 text-amber-300 border border-amber-500/40 px-3 py-0.5 rounded-full">
+                    Em Breve • Desenvolvimento
+                  </span>
+                  <h2 class="text-2xl font-bold text-white mt-1">Controle de Entregas por Setor e Responsável</h2>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Visibilidade clara para os sócios e gestores do escritório: quais declarações e guias (DCTF, EFD-Reinf, DASN, Folha, E-Social) já foram enviadas e quais estão no prazo limite.
+              </p>
+
+              <div class="space-y-2 text-xs text-slate-400">
+                <p>• Divisão por setores: <strong>Fiscal, Pessoal/Folha e Contábil</strong>.</p>
+                <p>• Responsável definido para cada cliente e tarefa.</p>
+                <p>• Visão de calendário com alertas de pendências críticas.</p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-950/70 rounded-2xl p-6 border border-slate-800 space-y-3">
+              <span class="text-xs font-mono text-amber-400 block border-b border-slate-800 pb-2">SIMPLICIDADE</span>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Ao contrário de softwares de gestão de tarefas genéricos que exigem dias de configuração, este módulo é concebido com os prazos e rotinas contábeis já pré-configurados.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Módulo 5: Ferramentas Fiscais / Reforma Tributária (SOB MEDIDA) -->
+        <section id="fiscal" class="glass-card rounded-3xl p-8 sm:p-10 border-slate-800 scroll-mt-28">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <span class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center font-bold">
+                  <i data-lucide="calculator" class="w-6 h-6"></i>
+                </span>
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-950/80 text-blue-300 border border-blue-500/40 px-3 py-0.5 rounded-full">
+                    Sob Medida
+                  </span>
+                  <h2 class="text-2xl font-bold text-white mt-1">Ferramentas Fiscais & Preparação para Reforma Tributária</h2>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Scripts e utilitários sob demanda para resolver dores pontuais do setor fiscal: conferência de retenções de ISS de Tubarão e ferramentas para simulação e adaptação aos novos tributos (IBS/CBS).
+              </p>
+
+              <div class="space-y-2 text-xs text-slate-400">
+                <p>• Conferência em lote de arquivos XML de NFS-e da Prefeitura de Tubarão.</p>
+                <p>• Cruzamento de alíquotas e apurações por tomador/prestador.</p>
+                <p>• Consultoria técnica para automação de regras fiscais personalizadas.</p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-950/70 rounded-2xl p-6 border border-slate-800 space-y-3">
+              <span class="text-xs font-mono text-blue-400 block border-b border-slate-800 pb-2">DESENVOLVIMENTO CUSTOMIZADO</span>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Desenvolvemos pontes e importadores específicos de acordo com as necessidades fiscais dos clientes mais complexos do seu escritório.
+              </p>
+              <a href="contato.html" class="inline-block text-xs font-bold text-blue-300 hover:text-white underline">
+                Conversar sobre uma necessidade fiscal →
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- TABELA COMPARATIVA: PLANILHA VS MAKERPIXEL -->
+      <section class="py-12 border-t border-slate-800">
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <h3 class="text-2xl font-bold text-white">Como seu escritório trabalha hoje vs. Com a MakerPixel</h3>
+          <p class="text-slate-400 text-xs">A diferença prática no fechamento da competência.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left text-slate-300 border-collapse">
+            <thead>
+              <tr class="border-b border-slate-800 text-slate-400 uppercase text-[10px] tracking-wider">
+                <th class="py-3 px-4">Atividade / Recurso</th>
+                <th class="py-3 px-4 bg-rose-950/20 text-rose-300">Rotina Tradicional (Planilhas & Manual)</th>
+                <th class="py-3 px-4 bg-cyan-950/40 text-cyan-300 font-bold">Com MakerPixel Techsystem</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/80">
+              <tr>
+                <td class="py-3 px-4 font-semibold text-white">Importação de Extratos Bancários</td>
+                <td class="py-3 px-4 text-slate-400">Digitação manual linha por linha ou conversão frágil</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Leitura direta de 9+ bancos em OFX, PDF e CSV</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-semibold text-white">Arquivo Oficial SCI Único</td>
+                <td class="py-3 px-4 text-slate-400">Macros em VBA que quebram com atualizações</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Geração oficial UTF-8 com BOM e 16 colunas limpas</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-semibold text-white">Classificação de Fornecedores</td>
+                <td class="py-3 px-4 text-slate-400">O analista precisa lembrar as contas a cada mês</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Aprendizado inteligente por CNPJ e histórico padrão</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-semibold text-white">Suporte Técnico</td>
+                <td class="py-3 px-4 text-slate-400">Fila de espera de 0800 e abertura de chamados lentos</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Atendimento direto com o desenvolvedor no WhatsApp</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-semibold text-white">Troca de Sistema Contábil</td>
+                <td class="py-3 px-4 text-slate-400">Custo e estresse de migração de ERP</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Zero troca: funciona como complemento ao seu ERP atual</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 text-center space-y-6">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Quer ver como esses módulos funcionam com os extratos do seu escritório?
+        </h3>
+        <p class="text-slate-300 text-sm max-w-xl mx-auto">
+          Fazemos uma demonstração prática de 20 minutos com arquivos reais de exemplo para você comprovar a economia de tempo.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contato.html" class="w-full sm:w-auto btn-gradient-primary px-8 py-3.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
+            Agendar Demonstração Sem Compromisso
+          </a>
+          <a href="https://wa.me/5548984570272" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-slate-700 hover:border-cyan-400">
+            Falar no WhatsApp (48) 98457-0272
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ UNIFICADO -->
+  <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
+            <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
+            <span class="block text-[11px] text-slate-500">Módulos especializados para escritórios de contabilidade</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
+          <a href="index.html" class="hover:text-cyan-400">Início</a>
+          <a href="modulos.html" class="text-cyan-400 font-bold">Módulos</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona</a>
+          <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
+          <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
+          <a href="contato.html" class="hover:text-cyan-400">Contato</a>
+          <a href="outros-projetos.html" class="text-slate-500 hover:text-slate-300">Outros Projetos</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/5548984570272" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400" title="WhatsApp">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400" title="E-mail">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
+        <p>Solução complementar aos sistemas contábeis de mercado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança & LGPD na Rotina Contábil | MakerPixel Techsystem</title>
+  
+  <meta name="description" content="Conheça a arquitetura de segurança, controle de perfis por setor, criptografia e conformidade LGPD da MakerPixel para proteção de escritórios contábeis.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00A3E0',
+              hover: '#0284C7',
+              light: '#38BDF8',
+              navy: '#0F2B48',
+              dark: '#070B14',
+              surface: '#0F172A',
+              card: '#131D33',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative flex items-center justify-center p-2 rounded-xl bg-slate-900/80 border border-cyan-500/30 group-hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-950/40">
+            <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-white flex items-center">
+              Maker<span class="text-[#00A3E0] font-black drop-shadow-[0_0_8px_rgba(0,163,224,0.6)]">Pixel</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-cyan-200/80 -mt-1">
+              Techsystem Contábil
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
+          <a href="modulos.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Como Funciona & FAQ</a>
+          <a href="seguranca.html" class="text-cyan-400 font-bold transition-colors">Segurança & LGPD</a>
+          <a href="sobre.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Sobre Nós</a>
+          <a href="contato.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="contato.html" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Demonstração
+          </a>
+        </div>
+
+        <div class="flex lg:hidden items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="como-funciona.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Como Funciona & FAQ</a>
+      <a href="seguranca.html" class="block text-base font-semibold text-cyan-400">Segurança & LGPD</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <div class="pt-4 border-t border-slate-800">
+        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Agendar Demonstração Prática
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="flex-grow pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Cabeçalho -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="tech-tag inline-block">Blindagem & Sigilo</div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Segurança da informação e LGPD para escritórios contábeis
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Sabemos que dados bancários, balancetes e informações fiscais exigem proteção máxima. Veja como a arquitetura da MakerPixel foi concebida para proteger a confiança dos seus clientes.
+        </p>
+      </div>
+
+      <!-- OS 4 PILARES DE SEGURANÇA -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Pilar 1: Login Individual & Setores -->
+        <div class="glass-card rounded-3xl p-8 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-xl font-bold text-white">Login Individual & Permissão por Setor</h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Nada de senhas compartilhadas entre a equipe. Cada membro do escritório acessa com sua credencial própria, limitada exatamente ao que o seu cargo exige:
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-3">
+            <li class="flex items-center gap-2">
+              <i data-lucide="shield" class="w-4 h-4 text-cyan-400"></i>
+              <span><strong>Administrador / Sócio:</strong> Acesso irrestrito a configurações, planos de contas e auditoria.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="shield" class="w-4 h-4 text-cyan-400"></i>
+              <span><strong>Contador / Fiscal:</strong> Acesso à classificação, conciliação e geração do arquivo oficial SCI Único.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="shield" class="w-4 h-4 text-cyan-400"></i>
+              <span><strong>Operador / Lançamentos:</strong> Focado na importação de extratos e validação de pendências.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pilar 2: Conformidade com a LGPD -->
+        <div class="glass-card rounded-3xl p-8 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-xl font-bold text-white">Conformidade Estrita com a LGPD</h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) impõe responsabilidades severas para contadores. Nosso software segue diretrizes rigorosas:
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-3">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Propriedade Exclusiva:</strong> Os dados dos extratos e clientes pertencem 100% ao seu escritório.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Zero Compartilhamento:</strong> Não vendemos, não monetizamos e não cedemos dados para brokers de crédito.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Exclusão Sob Demanda:</strong> Possibilidade de purgar dados de empresas inativas a qualquer momento.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pilar 3: Criptografia e Isolamento -->
+        <div class="glass-card rounded-3xl p-8 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+            <i data-lucide="lock" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-xl font-bold text-white">Criptografia & Tráfego Seguro</h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Toda a comunicação entre o navegador do seu analista e o sistema utiliza conexões criptografadas com certificado SSL/TLS de ponta a ponta:
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-3">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Tráfego forçado via HTTPS com proteção contra interceptação (HSTS).</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Processamento em memória dos extratos bancários, minimizando exposição residual.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+              <span>Compatibilidade com políticas de firewall e redes corporativas locais do escritório.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pilar 4: Backups e Auditoria -->
+        <div class="glass-card rounded-3xl p-8 border-slate-800 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <h2 class="text-xl font-bold text-white">Backup Automatizado & Logs de Auditoria</h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            Tranquilidade total para o responsável técnico do escritório contábil:
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 border-t border-slate-800 pt-3">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Backup em 1 Clique:</strong> Download instantâneo de snapshot estruturado com todas as parametrizações.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Restauração Rápida:</strong> Se um computador queimar, basta importar o arquivo de restauração em segundos.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+              <span><strong>Rastreabilidade de Operações:</strong> Registro de data, hora e usuário para cada lote do SCI Único gerado.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- MENSAGEM DO DESENVOLVEDOR -->
+      <div class="p-8 rounded-3xl bg-slate-900/90 border border-cyan-500/30 flex flex-col md:flex-row items-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-cyan-500 flex items-center justify-center text-slate-950 font-black text-xl flex-shrink-0">
+          MG
+        </div>
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="text-lg font-bold text-white">Compromisso do Desenvolvedor com a Sua Empresa</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            "Como morador de Tubarão e criador da MakerPixel, sei que a confiança de um escritório de contabilidade é o seu bem mais precioso. Nossa ferramenta foi arquitetada para que você tenha controle absoluto sobre quem acessa o quê e onde seus arquivos estão."
+          </p>
+          <span class="text-xs text-cyan-300 font-semibold block pt-1">
+            — Mauricio Goulart de Oliveira • Fundador da MakerPixel Techsystem
+          </span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center space-y-4 pt-6">
+        <h3 class="text-xl font-bold text-white">Quer conhecer os detalhes técnicos de segurança?</h3>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contato.html" class="btn-gradient-primary px-8 py-3.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
+            Agendar Demonstração Técnica
+          </a>
+          <a href="https://wa.me/5548984570272" target="_blank" class="px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-slate-700 hover:border-cyan-400">
+            Falar no WhatsApp (48) 98457-0272
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ UNIFICADO -->
+  <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
+            <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
+            <span class="block text-[11px] text-slate-500">Segurança da informação e privacidade em primeiro lugar</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
+          <a href="index.html" class="hover:text-cyan-400">Início</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona</a>
+          <a href="seguranca.html" class="text-cyan-400 font-bold">Segurança & LGPD</a>
+          <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
+          <a href="contato.html" class="hover:text-cyan-400">Contato</a>
+          <a href="outros-projetos.html" class="text-slate-500 hover:text-slate-300">Outros Projetos</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/5548984570272" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400" title="WhatsApp">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400" title="E-mail">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
+        <p>Conformidade estrita com a LGPD (Lei nº 13.709/2018).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,12 +1,12 @@
 /**
- * MakerPixel Techsystem - Script Interativo Principal
+ * MakerPixel Techsystem - Script Interativo Multi-Páginas (Foco Contábil)
  * WhatsApp: 48984570272
  * Email: mauriciogoulart.deoliveira37@gmail.com
- * Instagram: @makerpixeltech
+ * Especialista em Tecnologia para Escritórios de Contabilidade (Tubarão & Sul de SC)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicialização de Ícones Lucide (se carregado)
+  // Inicialização de Ícones Lucide
   if (window.lucide) {
     window.lucide.createIcons();
   }
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   /* -------------------------------------------------------------
-     2. Menu Mobile
+     2. Menu Mobile Responsivo
      ------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Fechar menu mobile ao clicar em qualquer link
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -38,13 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     3. Widget Flutuante do WhatsApp
+     3. Widget Flutuante do WhatsApp (Foco Contábil)
      ------------------------------------------------------------- */
   const waToggleBtn = document.getElementById('wa-toggle-btn');
   const waChatWindow = document.getElementById('wa-chat-window');
   const waCloseBtn = document.getElementById('wa-close-btn');
   const waSendBtn = document.getElementById('wa-send-btn');
   const waNameInput = document.getElementById('wa-client-name');
+  const waOfficeInput = document.getElementById('wa-client-office');
   const waMessageInput = document.getElementById('wa-client-message');
   const waPresets = document.querySelectorAll('.wa-preset-pill');
 
@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Fechar ao clicar fora da janela de chat
+    // Fechar ao clicar fora
     document.addEventListener('click', (e) => {
       if (!waChatWindow.contains(e.target) && !waToggleBtn.contains(e.target)) {
         waChatWindow.classList.add('hidden');
       }
     });
 
-    // Pílulas com respostas rápidas pré-definidas
+    // Pílulas com assuntos rápidos para contadores
     waPresets.forEach(preset => {
       preset.addEventListener('click', () => {
         const text = preset.getAttribute('data-text');
@@ -83,22 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Enviar mensagem pelo WhatsApp
+    // Envio pelo WhatsApp
     if (waSendBtn) {
       waSendBtn.addEventListener('click', () => {
         const name = waNameInput ? waNameInput.value.trim() : '';
+        const office = waOfficeInput ? waOfficeInput.value.trim() : '';
         const message = waMessageInput ? waMessageInput.value.trim() : '';
 
-        let fullText = `Olá, Mauricio (MakerPixel Techsystem)!`;
-        if (name) {
-          fullText += ` Meu nome é *${name}*.`;
-        }
+        let fullText = `*CONTATO VIA SITE - MAKERPIXEL CONTÁBIL*\n`;
+        fullText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+        if (name) fullText += `👤 *Nome:* ${name}\n`;
+        if (office) fullText += `🏢 *Escritório:* ${office}\n`;
         if (message) {
-          fullText += `\n\n${message}`;
+          fullText += `💬 *Mensagem / Dúvida:*\n${message}\n`;
         } else {
-          fullText += `\n\nGostaria de solicitar um orçamento para o meu projeto!`;
+          fullText += `💬 *Mensagem:* Olá Mauricio, gostaria de agendar uma demonstração rápida da conciliação bancária e integração com o SCI Único.\n`;
         }
-        fullText += `\n\n_(Vim pelo site oficial da MakerPixel)_`;
+        fullText += `━━━━━━━━━━━━━━━━━━━━━\n`;
+        fullText += `_(Atendimento direto com o desenvolvedor em Tubarão/SC)_`;
 
         const encodedUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(fullText)}`;
         window.open(encodedUrl, '_blank');
@@ -108,181 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     4. Filtro de Portfólio & Cases
+     4. Formulário de Diagnóstico Contábil (Página de Contato & Home)
      ------------------------------------------------------------- */
-  const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
-  const portfolioItems = document.querySelectorAll('.portfolio-card');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => {
-        b.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-lg', 'shadow-cyan-500/25');
-        b.classList.add('bg-slate-900', 'text-slate-300', 'border-slate-800');
-      });
-      btn.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-lg', 'shadow-cyan-500/25');
-      btn.classList.remove('bg-slate-900', 'text-slate-300', 'border-slate-800');
-
-      const filter = btn.getAttribute('data-filter');
-
-      portfolioItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || category === filter || (category && category.includes(filter))) {
-          item.style.display = 'block';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(15px)';
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 200);
-        }
-      });
-    });
-  });
-
-  /* -------------------------------------------------------------
-     5. Simulador de Projetos & Orçamento Interativo
-     ------------------------------------------------------------- */
-  const projectTypeSelect = document.getElementById('calc-project-type');
-  const featureCheckboxes = document.querySelectorAll('.calc-feature');
-  const urgencySelect = document.getElementById('calc-urgency');
-  const clientDescInput = document.getElementById('calc-description');
-  const calcWhatsappBtn = document.getElementById('calc-send-wa');
-  const summaryTypeElem = document.getElementById('summary-type');
-  const summaryFeaturesElem = document.getElementById('summary-features');
-
-  function updateCalculatorSummary() {
-    if (!summaryTypeElem) return;
-
-    const selectedTypeOption = projectTypeSelect ? projectTypeSelect.options[projectTypeSelect.selectedIndex] : null;
-    const typeText = selectedTypeOption ? selectedTypeOption.text : 'Projeto Personalizado';
-    summaryTypeElem.textContent = typeText;
-
-    const selectedFeatures = [];
-    featureCheckboxes.forEach(cb => {
-      if (cb.checked) {
-        selectedFeatures.push(cb.getAttribute('data-name') || cb.value);
-      }
-    });
-
-    if (summaryFeaturesElem) {
-      if (selectedFeatures.length > 0) {
-        summaryFeaturesElem.innerHTML = selectedFeatures
-          .map(f => `<span class="inline-block bg-cyan-950/60 border border-cyan-800/40 text-cyan-300 text-xs px-2.5 py-1 rounded-md mr-1 mb-1">✓ ${f}</span>`)
-          .join('');
-      } else {
-        summaryFeaturesElem.innerHTML = '<span class="text-slate-400 text-xs italic">Nenhum módulo adicional selecionado</span>';
-      }
-    }
-  }
-
-  if (projectTypeSelect) {
-    projectTypeSelect.addEventListener('change', updateCalculatorSummary);
-  }
-
-  featureCheckboxes.forEach(cb => {
-    cb.addEventListener('change', updateCalculatorSummary);
-  });
-
-  if (calcWhatsappBtn) {
-    calcWhatsappBtn.addEventListener('click', () => {
-      const typeOption = projectTypeSelect ? projectTypeSelect.options[projectTypeSelect.selectedIndex].text : 'Projeto Sob Medida';
-      const urgency = urgencySelect ? urgencySelect.options[urgencySelect.selectedIndex].text : 'Normal';
-      const details = clientDescInput ? clientDescInput.value.trim() : '';
-
-      const features = [];
-      featureCheckboxes.forEach(cb => {
-        if (cb.checked) {
-          features.push(cb.getAttribute('data-name') || cb.value);
-        }
-      });
-
-      let text = `*SOLICITAÇÃO DE ORÇAMENTO - MAKERPIXEL TECHSYSTEM*\n`;
-      text += `━━━━━━━━━━━━━━━━━━━━━\n`;
-      text += `🚀 *Tipo de Projeto:* ${typeOption}\n`;
-      text += `⏱️ *Previsão / Urgência:* ${urgency}\n`;
-      
-      if (features.length > 0) {
-        text += `\n📦 *Recursos & Módulos Desejados:*\n`;
-        features.forEach(f => {
-          text += `  • ${f}\n`;
-        });
-      }
-
-      if (details) {
-        text += `\n📝 *Detalhes Adicionais:*\n"${details}"\n`;
-      }
-
-      text += `━━━━━━━━━━━━━━━━━━━━━\n`;
-      text += `Olá Mauricio, configurei esta proposta pelo simulador do site da MakerPixel e gostaria de saber prazos e valores para iniciarmos!`;
-
-      const encodedUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(text)}`;
-      window.open(encodedUrl, '_blank');
-    });
-  }
-
-  // Inicializar o resumo do simulador
-  updateCalculatorSummary();
-
-  /* -------------------------------------------------------------
-     6. Modal de Lightbox para Imagens
-     ------------------------------------------------------------- */
-  const lightboxModal = document.getElementById('lightbox-modal');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxTitle = document.getElementById('lightbox-title');
-  const lightboxDesc = document.getElementById('lightbox-desc');
-  const lightboxClose = document.getElementById('lightbox-close');
-
-  window.openLightbox = function(imgSrc, title, desc) {
-    if (!lightboxModal || !lightboxImg) return;
-    lightboxImg.src = imgSrc;
-    if (lightboxTitle) lightboxTitle.textContent = title || 'Visualização do Projeto';
-    if (lightboxDesc) lightboxDesc.textContent = desc || '';
-    lightboxModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  };
-
-  if (lightboxClose && lightboxModal) {
-    lightboxClose.addEventListener('click', () => {
-      lightboxModal.classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    });
-
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) {
-        lightboxModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
-        lightboxModal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    });
-  }
-
-  /* -------------------------------------------------------------
-     7. Formulário de Contato Direto
-     ------------------------------------------------------------- */
-  const directContactForm = document.getElementById('direct-contact-form');
-  if (directContactForm) {
-    directContactForm.addEventListener('submit', (e) => {
+  const accountingForm = document.getElementById('accounting-diagnosis-form');
+  if (accountingForm) {
+    accountingForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('contact-name').value.trim();
-      const contactWhats = document.getElementById('contact-phone').value.trim();
-      const service = document.getElementById('contact-service').value;
-      const message = document.getElementById('contact-message').value.trim();
 
-      let text = `*NOVA MENSAGEM DO SITE (MAKERPIXEL TECH)*\n`;
-      text += `👤 *Nome:* ${name}\n`;
-      if (contactWhats) text += `📱 *Telefone/Whats:* ${contactWhats}\n`;
-      text += `📌 *Serviço de Interesse:* ${service}\n`;
-      text += `💬 *Mensagem:*\n${message}\n`;
+      const name = document.getElementById('diag-name')?.value.trim() || '';
+      const office = document.getElementById('diag-office')?.value.trim() || '';
+      const city = document.getElementById('diag-city')?.value.trim() || '';
+      const phone = document.getElementById('diag-phone')?.value.trim() || '';
+      const companies = document.getElementById('diag-companies')?.value || '';
+      const erp = document.getElementById('diag-erp')?.value || '';
+      const mainPain = document.getElementById('diag-pain')?.value.trim() || '';
+
+      let text = `*SOLICITAÇÃO DE DEMONSTRAÇÃO & DIAGNÓSTICO CONTÁBIL*\n`;
+      text += `━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      text += `👤 *Responsável:* ${name}\n`;
+      text += `🏢 *Escritório:* ${office}\n`;
+      text += `📍 *Cidade/Região:* ${city}\n`;
+      if (phone) text += `📱 *Telefone/WhatsApp:* ${phone}\n`;
+      text += `📊 *Empresas Atendidas:* ${companies}\n`;
+      text += `💻 *Sistema Contábil Atual:* ${erp}\n`;
+      text += `\n⚠️ *Maior Gargalo / Dor Hoje:*\n"${mainPain}"\n`;
+      text += `━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+      text += `Olá Mauricio, preenchi o formulário no site da MakerPixel e gostaria de agendar uma demonstração prática focada na nossa rotina!`;
 
       const encodedUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(text)}`;
       window.open(encodedUrl, '_blank');
@@ -290,25 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     8. Smooth Scroll para Links Internos
+     5. Destaque de Navegação Ativa
      ------------------------------------------------------------- */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId && targetId !== '#') {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          const navOffset = 80;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }
-    });
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('text-cyan-400', 'font-bold');
+      link.classList.remove('text-slate-300');
+    }
   });
 });

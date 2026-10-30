@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato & Diagnóstico Contábil | MakerPixel Techsystem</title>
+  
+  <meta name="description" content="Agende uma demonstração prática ou faça um diagnóstico da rotina contábil do seu escritório. Atendimento direto com Mauricio Goulart em Tubarão/SC.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00A3E0',
+              hover: '#0284C7',
+              light: '#38BDF8',
+              navy: '#0F2B48',
+              dark: '#070B14',
+              surface: '#0F172A',
+              card: '#131D33',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative flex items-center justify-center p-2 rounded-xl bg-slate-900/80 border border-cyan-500/30 group-hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-950/40">
+            <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-tight text-white flex items-center">
+              Maker<span class="text-[#00A3E0] font-black drop-shadow-[0_0_8px_rgba(0,163,224,0.6)]">Pixel</span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-cyan-200/80 -mt-1">
+              Techsystem Contábil
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
+          <a href="modulos.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Como Funciona & FAQ</a>
+          <a href="seguranca.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Segurança & LGPD</a>
+          <a href="sobre.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Sobre Nós</a>
+          <a href="contato.html" class="text-cyan-400 font-bold transition-colors">Contato</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/5548984570272" target="_blank" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Direto
+          </a>
+        </div>
+
+        <div class="flex lg:hidden items-center">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="como-funciona.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Como Funciona & FAQ</a>
+      <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
+      <a href="contato.html" class="block text-base font-semibold text-cyan-400">Contato & Diagnóstico</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="flex-grow pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Cabeçalho -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="tech-tag inline-block">Atendimento Direto com o Desenvolvedor</div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Agende uma demonstração prática ou tire suas dúvidas
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Preencha o formulário abaixo para mapearmos a rotina do seu escritório contábil ou chame direto no WhatsApp. Sem 0800 e sem enrolação.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Canais de Contato Oficiais (Esquerda) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border-slate-800 space-y-6">
+            <h2 class="text-xl font-bold text-white border-b border-slate-800 pb-3">Canais de Contato Direto</h2>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Sou%20de%20um%20escrit%C3%B3rio%20cont%C3%A1bil%20e%20gostaria%20de%20conversar." 
+               target="_blank" 
+               class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 group transition-all">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div class="flex-1">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">WhatsApp Direto (Sem 0800)</span>
+                <span class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors">(48) 98457-0272</span>
+                <span class="text-[11px] text-emerald-400 block">Atendimento: Mauricio Goulart</span>
+              </div>
+            </a>
+
+            <!-- E-mail -->
+            <a href="mailto:mauriciogoulart.deoliveira37@gmail.com?subject=Contato%20Escritório%20Contábil%20-%20MakerPixel" 
+               class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 group transition-all">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div class="flex-1 overflow-hidden">
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">E-mail Profissional</span>
+                <span class="text-xs sm:text-sm font-bold text-white group-hover:text-cyan-400 transition-colors truncate block">mauriciogoulart.deoliveira37@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- Localização -->
+            <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800">
+              <div class="w-12 h-12 rounded-xl bg-slate-800 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold block">Base Operacional</span>
+                <span class="text-sm font-bold text-white">Tubarão, Santa Catarina</span>
+                <span class="text-[11px] text-cyan-300/90 block">Atendimento presencial no Sul de SC & online para todo o Brasil</span>
+              </div>
+            </div>
+
+            <!-- Aviso de Agendamento -->
+            <div class="p-4 rounded-2xl bg-cyan-950/40 border border-cyan-500/30 text-xs text-slate-300 space-y-1">
+              <span class="font-bold text-cyan-300 block">Demonstração com Dados Reais de Teste</span>
+              <p class="text-[11px] text-slate-400">
+                Se você tiver um extrato em PDF ou OFX que sempre gera dor de cabeça para conciliar, pode trazer para a demonstração e testamos ao vivo na tela.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de Diagnóstico (Direita) -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-6 sm:p-10 border-cyan-500/30 shadow-2xl">
+            <h2 class="text-2xl font-bold text-white mb-2">Formulário de Diagnóstico Contábil</h2>
+            <p class="text-slate-400 text-xs mb-6">
+              Leva menos de 1 minuto para preencher. Usamos essas informações para preparar uma demonstração personalizada para a realidade do seu escritório.
+            </p>
+
+            <form id="accounting-diagnosis-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu Nome *</label>
+                  <input type="text" id="diag-name" required placeholder="Como podemos te chamar?" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nome do Escritório Contábil *</label>
+                  <input type="text" id="diag-office" required placeholder="Nome da empresa contábil..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Cidade / Estado *</label>
+                  <input type="text" id="diag-city" required placeholder="Ex: Tubarão - SC" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Telefone / WhatsApp *</label>
+                  <input type="text" id="diag-phone" required placeholder="(DDD) 99999-9999" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Quantas empresas você atende hoje?</label>
+                  <select id="diag-companies" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                    <option value="Até 30 empresas">Até 30 empresas</option>
+                    <option value="30 a 80 empresas" selected>30 a 80 empresas</option>
+                    <option value="80 a 200 empresas">80 a 200 empresas</option>
+                    <option value="Mais de 200 empresas">Mais de 200 empresas</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Sistema Contábil Principal</label>
+                  <select id="diag-erp" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                    <option value="SCI Único" selected>SCI Único (Foco prioritário)</option>
+                    <option value="Domínio Sistemas (Thomson Reuters)">Domínio Sistemas</option>
+                    <option value="Questor">Questor</option>
+                    <option value="Outro Sistema">Outro Sistema</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Qual é o maior gargalo ou dor do escritório hoje? *</label>
+                <textarea id="diag-pain" required rows="3" placeholder="Ex: Clientes demoram para enviar extratos, ou perco muito tempo digitando movimentação bancária..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-gradient-primary py-4 rounded-xl text-sm font-extrabold text-slate-950 uppercase tracking-wider flex items-center justify-center gap-2">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Enviar Diagnóstico e Falar no WhatsApp
+              </button>
+
+              <p class="text-[11px] text-slate-500 text-center">
+                Sigilo absoluto garantido pela LGPD. Não enviamos spam.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ UNIFICADO -->
+  <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
+            <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="44" height="44" rx="10" fill="#00A3E0" fill-opacity="0.18" />
+              <rect x="7" y="14" width="4.5" height="12" rx="1.5" fill="#0284C7" />
+              <rect x="14" y="8" width="4.5" height="18" rx="1.5" fill="#00A3E0" />
+              <rect x="21" y="11" width="4.5" height="15" rx="1.5" fill="#38BDF8" />
+              <rect x="7" y="28" width="7" height="7" rx="1.5" stroke="#0284C7" stroke-width="2" fill="none" />
+              <rect x="9.5" y="30.5" width="2" height="2" rx="0.5" fill="#00A3E0" />
+              <path d="M16 31.5H35" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="36" cy="31.5" r="2" fill="#38BDF8" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
+            <span class="block text-[11px] text-slate-500">Atendimento direto com o desenvolvedor em Tubarão/SC</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
+          <a href="index.html" class="hover:text-cyan-400">Início</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona</a>
+          <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
+          <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
+          <a href="contato.html" class="text-cyan-400 font-bold">Contato</a>
+          <a href="outros-projetos.html" class="text-slate-500 hover:text-slate-300">Outros Projetos</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/5548984570272" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400" title="WhatsApp">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400" title="E-mail">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
+        <p>WhatsApp: (48) 98457-0272 • Atendimento sem 0800</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
