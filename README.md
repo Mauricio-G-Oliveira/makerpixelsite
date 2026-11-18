@@ -19,9 +19,9 @@ O site está publicado e ativo em produção:
 
 Estrutura corporativa multi-páginas de navegação limpa, sem depender de uma landing page única:
 
-- **[`index.html`](index.html)**: Visão geral da plataforma, dores do escritório contábil, números reais e formulário de diagnóstico.
-- **[`modulos.html`](modulos.html)**: Detalhamento de cada módulo, com total transparência técnica do que está pronto (em produção) vs. sob medida ou em breve.
-- **[`como-funciona.html`](como-funciona.html)**: Metodologia de implantação em 4 passos, treinamento da equipe e FAQ contábil aprofundado (SCI Único, conciliação e suporte direto).
+- **[`index.html`](index.html)**: Visão geral da plataforma, **vídeo demonstrativo comercial do carro-chefe (Central Contábil)** em Full HD, dores do escritório contábil, números reais e formulário de diagnóstico.
+- **[`modulos.html`](modulos.html)**: Detalhamento de cada módulo e player do vídeo da Central Contábil em operação real, com total transparência técnica do que está pronto (em produção) vs. sob medida ou em breve.
+- **[`como-funciona.html`](como-funciona.html)**: Metodologia de implantação em 4 passos, vídeo demonstrativo prático do fluxo completo, treinamento da equipe e FAQ contábil aprofundado (SCI Único, conciliação e suporte direto).
 - **[`seguranca.html`](seguranca.html)**: Segurança da informação, controle de acessos por setor (Fiscal, Contábil, Folha, Admin), backups e conformidade estrita com a LGPD.
 - **[`sobre.html`](sobre.html)**: Nossa história em Tubarão/SC, proximidade com a rotina contábil regional e os 3 princípios fundamentais.
 - **[`contato.html`](contato.html)**: Formulário de diagnóstico contábil (nome, escritório, cidade, empresas atendidas, maior gargalo) e canais de atendimento direto.
