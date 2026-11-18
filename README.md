@@ -49,6 +49,24 @@ Estrutura corporativa multi-páginas de navegação limpa, sem depender de uma l
 
 ---
 
+## 🌟 Principais Projetos de Engenharia de Maurício Oliveira
+
+Seguindo a visão integrada de engenharia de software e produtos digitais:
+
+1. **📊 [Central Contábil by MakerPixel](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)** *(Carro-Chefe Contábil)*
+   - **Foco:** Produtividade contábil, conciliação bancária multi-extratos (OFX/PDF/CSV de 9+ bancos) e geração de lotes oficiais em UTF-8 com BOM para o SCI Único.
+   - **Links:** [Website Oficial](https://mauricio-g-oliveira.github.io/makerpixelsite/) • [Repositório](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)
+
+2. **🏦 [Fintech Core Ledger & Instant Payment Engine](https://github.com/Mauricio-G-Oliveira/fintech-core-ledger)**
+   - **Foco:** Motor transacional bancário de liquidação instantânea por partidas dobradas, concorrência livre de deadlocks (`SELECT FOR UPDATE` determinístico) e garantia de idempotência (UUIDv7).
+   - **Links:** [Simulador Online](https://mauricio-g-oliveira.github.io/fintech-core-ledger/) • [Repositório](https://github.com/Mauricio-G-Oliveira/fintech-core-ledger)
+
+3. **🎛️ [StageFlow Platform • Ecosystem Full-Stack Cloud](https://github.com/Mauricio-G-Oliveira/stageflow)**
+   - **Foco:** Ecossistema em nuvem para gestão de bandas musicais, repertório, propostas comerciais em PDF e eventos ao vivo.
+   - **Links:** [Aplicação PWA](https://mauricio-g-oliveira.github.io/stageflow/) • [Repositório Frontend](https://github.com/Mauricio-G-Oliveira/stageflow) • [Repositório Backend](https://github.com/Mauricio-G-Oliveira/stageflow-backend)
+
+---
+
 ## 📞 Canais Oficiais de Contato
 
 - **WhatsApp Direto**: [(48) 98457-0272](https://wa.me/5548984570272) *(Atendimento direto com o desenvolvedor, sem 0800)*
