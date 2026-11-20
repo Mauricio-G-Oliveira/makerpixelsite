@@ -1,10 +1,10 @@
 # 🚀 MakerPixel Techsystem Contábil — Website Oficial
 
-Portal oficial da **MakerPixel Techsystem**, especializado em tecnologia e engenharia de software para **escritórios de contabilidade** em Tubarão, no Sul de Santa Catarina e em todo o Brasil.
+Portal oficial da **MakerPixel Techsystem**, especializado em tecnologia e engenharia de software para **escritórios de contabilidade** em Santa Catarina e em todo o Brasil.
 
 Fundada e desenvolvida por **Mauricio Goulart de Oliveira**.
 
-> *"Tecnologia para escritórios de contabilidade. Menos planilha, menos retrabalho, mais tempo para o cliente."*
+> *"Os XMLs das NFC-e dos seus clientes, todo dia, direto da SEF/SC. Menos tempo cobrando documento, mais tempo para a contabilidade consultiva."*
 
 ---
 
@@ -15,46 +15,50 @@ O site está publicado e ativo em produção:
 
 ---
 
-## 🏛️ Arquitetura Multi-Páginas
+## ⚡ Carro-Chefe: NotaSync (SEF/SC)
 
-Estrutura corporativa multi-páginas de navegação limpa, sem depender de uma landing page única:
-
-- **[`index.html`](index.html)**: Visão geral da plataforma, **vídeo demonstrativo comercial do carro-chefe (Central Contábil)** em Full HD, dores do escritório contábil, números reais e formulário de diagnóstico.
-- **[`modulos.html`](modulos.html)**: Detalhamento de cada módulo e player do vídeo da Central Contábil em operação real, com total transparência técnica do que está pronto (em produção) vs. sob medida ou em breve.
-- **[`como-funciona.html`](como-funciona.html)**: Metodologia de implantação em 4 passos, vídeo demonstrativo prático do fluxo completo, treinamento da equipe e FAQ contábil aprofundado (SCI Único, conciliação e suporte direto).
-- **[`seguranca.html`](seguranca.html)**: Segurança da informação, controle de acessos por setor (Fiscal, Contábil, Folha, Admin), backups e conformidade estrita com a LGPD.
-- **[`sobre.html`](sobre.html)**: Nossa história em Tubarão/SC, proximidade com a rotina contábil regional e os 3 princípios fundamentais.
-- **[`contato.html`](contato.html)**: Formulário de diagnóstico contábil (nome, escritório, cidade, empresas atendidas, maior gargalo) e canais de atendimento direto.
-- **[`outros-projetos.html`](outros-projetos.html)**: Lab / Projetos externos e paralelos (StageFlow para bandas/músicos e Banda Livert).
+O **NotaSync** resolve um dos gargalos diários mais desgastantes do setor fiscal:
+- **Download automático de madrugada** diretamente dos servidores da Secretaria de Estado da Fazenda de Santa Catarina (SEF/SC).
+- **Modelo 65 (NFC-e)**: Baixa os XMLs autorizados e eventos de cancelamento de todas as empresas do escritório.
+- **Usa o certificado digital A1 do próprio contador**: Desde que vinculado no SAT da SEF/SC, dispensa coletar certificados de clientes do Simples Nacional ou MEIs.
+- **Sem intermediários caros**: Elimina plataformas pagas por CNPJ consultado e rotinas manuais de download no portal estadual.
+- **Status atual**: *Programa Piloto com vagas limitadas para acompanhamento técnico próximo.*
 
 ---
 
-## 🛠️ Módulos & Destaques
+## 🏛️ Arquitetura Multi-Páginas
 
-1. **Conciliação Bancária & Importação Multi-Extratos (Pronto para Uso)**:
-   - Suporte a 9+ bancos (Sicoob, Sicredi, Caixa, Banco do Brasil, Itaú, Bradesco, Santander, Inter, etc.).
-   - Leitura de OFX, PDFs bancários, CSV e TXT Sicoob.
-   - Aprendizado automático por CNPJ e histórico padrão.
-2. **Integração com SCI Único (Pronto para Uso)**:
-   - Geração de arquivos oficiais `UNICO_<Unidade>.txt` em UTF-8 com BOM e CRLF (16 colunas separadas por vírgula).
-   - Relatório de conferência `PENDENCIAS_UNICO.csv`.
-3. **Controle de Vencimentos (Em Breve / Fase Piloto)**:
-   - Alvarás da Prefeitura de Tubarão, Bombeiros, Sanitário, CNDs e validade de certificados digitais A1/A3.
-4. **Controle de Entregas por Setor (Em Breve)**:
-   - Acompanhamento de rotinas e obrigações por setor (Fiscal, Contábil, DP).
-5. **Ferramentas Fiscais & Reforma Tributária (Sob Medida)**:
-   - Conferência de ISS e preparação para as regras de IBS/CBS.
-6. **Desenvolvimento Sob Medida**:
-   - Resolução de dores específicas e substituição de planilhas complexas em VBA.
+Estrutura corporativa multi-páginas com navegação fluida e padronizada:
+
+- **[`index.html`](index.html)**: Apresentação do NotaSync, vídeo da Central Contábil, painel mock de monitoramento SEF/SC, roadmap transparente e formulário de inscrição no piloto.
+- **[`modulos.html`](modulos.html)**: Detalhamento de cada frente de produto com status honesto (Piloto, Em desenvolvimento, Em breve, Sob medida).
+- **[`como-funciona.html`](como-funciona.html)**: Passo a passo da captura noturna na SEF/SC, vídeo demonstrativo da Central Contábil e FAQ técnico detalhado.
+- **[`seguranca.html`](seguranca.html)**: Arquitetura de proteção do certificado A1 (criptografia em repouso com chave assimétrica, sem armazenamento de senha em texto puro, escopo restrito à SEF/SC, trilha de auditoria e conformidade estrita com a LGPD).
+- **[`sobre.html`](sobre.html)**: Trajetória profissional de Mauricio Goulart como desenvolvedor de software focado no mercado contábil catarinense, filosofia técnica e contato direto.
+- **[`contato.html`](contato.html)**: Inscrição detalhada no piloto do NotaSync e canal direto de WhatsApp.
+- **[`outros-projetos.html`](outros-projetos.html)**: Projetos paralelos e portfólio de engenharia de software.
+
+---
+
+## 🛠️ Status dos Módulos
+
+| Módulo | Escopo | Status Real |
+| :--- | :--- | :--- |
+| **NotaSync (NFC-e mod. 65)** | Download automático noturno na SEF/SC via certificado do contador | **Programa Piloto (Vagas Limitadas)** |
+| **NF-e e CT-e (mod. 55 e 57)** | Captura nacional via webservices SEFAZ | **Em Desenvolvimento** |
+| **Controle de Vencimentos** | Alvarás, certidões negativas (CNDs) e certificados digitais | **Em Breve** |
+| **Controle de Entregas por Setor** | Checklist operacional por setor (Fiscal, Contábil, Pessoal) | **Em Breve** |
+| **Ferramentas Fiscais & Reforma** | Auditoria e conferência preparatória para IBS/CBS | **Em Breve** |
+| **Sistemas Sob Medida** | Automações e rotinas personalizadas para o escritório | **Sob Medida** |
 
 ---
 
 ## 🌟 Principais Projetos de Engenharia de Maurício Oliveira
 
-Seguindo a visão integrada de engenharia de software e produtos digitais:
+Seguindo a visão integrada de engenharia de software:
 
 1. **📊 [Central Contábil by MakerPixel](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)** *(Carro-Chefe Contábil)*
-   - **Foco:** Produtividade contábil, conciliação bancária multi-extratos (OFX/PDF/CSV de 9+ bancos) e geração de lotes oficiais em UTF-8 com BOM para o SCI Único.
+   - **Foco:** Plataforma de produtividade e gestão fiscal-contábil, automação de rotinas e integração de documentos fiscais.
    - **Links:** [Website Oficial](https://mauricio-g-oliveira.github.io/makerpixelsite/) • [Repositório](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)
 
 2. **🏦 [Fintech Core Ledger & Instant Payment Engine](https://github.com/Mauricio-G-Oliveira/fintech-core-ledger)**
@@ -69,9 +73,9 @@ Seguindo a visão integrada de engenharia de software e produtos digitais:
 
 ## 📞 Canais Oficiais de Contato
 
-- **WhatsApp Direto**: [(48) 98457-0272](https://wa.me/5548984570272) *(Atendimento direto com o desenvolvedor, sem 0800)*
+- **WhatsApp Direto**: [(48) 98457-0272](https://wa.me/5548984570272) *(Atendimento direto com o desenvolvedor, sem intermediários)*
 - **E-mail**: [mauriciogoulart.deoliveira37@gmail.com](mailto:mauriciogoulart.deoliveira37@gmail.com)
-- **Base Operacional**: Tubarão - Santa Catarina
+- **Base Operacional**: Santa Catarina • Atendimento para todo o Brasil
 
 ---
 
@@ -80,13 +84,8 @@ Seguindo a visão integrada de engenharia de software e produtos digitais:
 Para enviar atualizações para o GitHub Pages:
 
 ```bash
-./deploy-github.sh
-```
-
-Ou manualmente:
-```bash
 git add .
-git commit -m "update: melhorias no portal contábil"
+git commit -m "feat: atualizacoes no portal contabil"
 git push
 ```
 

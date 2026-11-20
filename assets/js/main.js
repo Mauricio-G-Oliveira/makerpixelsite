@@ -1,8 +1,8 @@
 /**
- * MakerPixel Techsystem - Script Interativo Multi-Páginas (Foco Contábil)
+ * MakerPixel Techsystem - Script Interativo Multi-Páginas (Foco Contábil / NotaSync)
  * WhatsApp: 48984570272
  * Email: mauriciogoulart.deoliveira37@gmail.com
- * Especialista em Tecnologia para Escritórios de Contabilidade (Tubarão & Sul de SC)
+ * Especialista em Tecnologia para Escritórios de Contabilidade (Santa Catarina)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     3. Widget Flutuante do WhatsApp (Foco Contábil)
+     3. Widget Flutuante do WhatsApp (Foco NotaSync)
      ------------------------------------------------------------- */
   const waToggleBtn = document.getElementById('wa-toggle-btn');
   const waChatWindow = document.getElementById('wa-chat-window');
@@ -97,10 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (message) {
           fullText += `💬 *Mensagem / Dúvida:*\n${message}\n`;
         } else {
-          fullText += `💬 *Mensagem:* Olá Mauricio, gostaria de agendar uma demonstração rápida da conciliação bancária e integração com o SCI Único.\n`;
+          fullText += `💬 *Mensagem:* Olá Mauricio, gostaria de saber mais sobre o NotaSync (captura automática de NFC-e na SEF/SC) e o programa piloto!\n`;
         }
         fullText += `━━━━━━━━━━━━━━━━━━━━━\n`;
-        fullText += `_(Atendimento direto com o desenvolvedor em Tubarão/SC)_`;
+        fullText += `_(Atendimento direto com o desenvolvedor em Santa Catarina)_`;
 
         const encodedUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(fullText)}`;
         window.open(encodedUrl, '_blank');
@@ -110,11 +110,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     4. Formulário de Diagnóstico Contábil (Página de Contato & Home)
+     4. Campo Condicional do Formulário Piloto ("Outro")
      ------------------------------------------------------------- */
-  const accountingForm = document.getElementById('accounting-diagnosis-form');
-  if (accountingForm) {
-    accountingForm.addEventListener('submit', (e) => {
+  const howDownloadSelect = document.getElementById('diag-how-download');
+  const howDownloadOtherInput = document.getElementById('diag-how-download-other');
+
+  if (howDownloadSelect && howDownloadOtherInput) {
+    howDownloadSelect.addEventListener('change', () => {
+      if (howDownloadSelect.value === 'Outro') {
+        howDownloadOtherInput.classList.remove('hidden');
+        howDownloadOtherInput.focus();
+      } else {
+        howDownloadOtherInput.classList.add('hidden');
+        howDownloadOtherInput.value = '';
+      }
+    });
+  }
+
+  /* -------------------------------------------------------------
+     5. Formulário do Programa Piloto NotaSync (#pilot-form)
+     ------------------------------------------------------------- */
+  const pilotForm = document.getElementById('pilot-form') || document.getElementById('accounting-diagnosis-form');
+  if (pilotForm) {
+    pilotForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const name = document.getElementById('diag-name')?.value.trim() || '';
@@ -122,20 +140,29 @@ document.addEventListener('DOMContentLoaded', () => {
       const city = document.getElementById('diag-city')?.value.trim() || '';
       const phone = document.getElementById('diag-phone')?.value.trim() || '';
       const companies = document.getElementById('diag-companies')?.value || '';
-      const erp = document.getElementById('diag-erp')?.value || '';
+      const erp = document.getElementById('diag-erp')?.value.trim() || '';
+      const howDownload = document.getElementById('diag-how-download')?.value || '';
+      const howDownloadOther = document.getElementById('diag-how-download-other')?.value.trim() || '';
       const mainPain = document.getElementById('diag-pain')?.value.trim() || '';
 
-      let text = `*SOLICITAÇÃO DE DEMONSTRAÇÃO & DIAGNÓSTICO CONTÁBIL*\n`;
+      const downloadMethodStr = (howDownload === 'Outro' && howDownloadOther) 
+        ? `Outro (${howDownloadOther})` 
+        : (howDownload || 'Não especificado');
+
+      let text = `*INSCRIÇÃO NO PROGRAMA PILOTO - NOTASYNC (SEF/SC)*\n`;
       text += `━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
       text += `👤 *Responsável:* ${name}\n`;
       text += `🏢 *Escritório:* ${office}\n`;
-      text += `📍 *Cidade/Região:* ${city}\n`;
-      if (phone) text += `📱 *Telefone/WhatsApp:* ${phone}\n`;
+      text += `📍 *Cidade / UF:* ${city}\n`;
+      if (phone) text += `📱 *Telefone / WhatsApp:* ${phone}\n`;
       text += `📊 *Empresas Atendidas:* ${companies}\n`;
-      text += `💻 *Sistema Contábil Atual:* ${erp}\n`;
-      text += `\n⚠️ *Maior Gargalo / Dor Hoje:*\n"${mainPain}"\n`;
+      text += `💻 *Sistema Contábil Atual:* ${erp || 'Não informado'}\n`;
+      text += `📥 *Como baixa NFC-e hoje:* ${downloadMethodStr}\n`;
+      if (mainPain) {
+        text += `\n⚠️ *Maior Gargalo / Dor Hoje:*\n"${mainPain}"\n`;
+      }
       text += `━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-      text += `Olá Mauricio, preenchi o formulário no site da MakerPixel e gostaria de agendar uma demonstração prática focada na nossa rotina!`;
+      text += `Olá Mauricio! Preenchi o formulário no site da MakerPixel e gostaria de participar do piloto para captura de NFC-e na SEF/SC.`;
 
       const encodedUrl = `${WHATSAPP_BASE_URL}?text=${encodeURIComponent(text)}`;
       window.open(encodedUrl, '_blank');
@@ -143,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     5. Destaque de Navegação Ativa
+     6. Destaque de Navegação Ativa
      ------------------------------------------------------------- */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('nav a, #mobile-menu a');

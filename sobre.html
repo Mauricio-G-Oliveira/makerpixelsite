@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre a MakerPixel Techsystem | Tecnologia Contábil em Tubarão/SC</title>
+  <title>Sobre a MakerPixel Techsystem | Automação Contábil em Santa Catarina</title>
   
-  <meta name="description" content="Conheça a história da MakerPixel Techsystem, fundada por Mauricio Goulart de Oliveira em Tubarão/SC com foco em tecnologia especializada para escritórios de contabilidade.">
+  <meta name="description" content="Conheça a MakerPixel Techsystem, fundada por Mauricio Goulart de Oliveira. Engenharia de software focada em automação fiscal e contábil em Santa Catarina.">
+  <meta name="keywords" content="sobre MakerPixel, Mauricio Goulart de Oliveira, tecnologia contábil Santa Catarina, software contábil SC, NotaSync, Central Contábil">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="apple-touch-icon" href="assets/img/logo.svg">
   
@@ -40,7 +41,7 @@
 </head>
 <body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER -->
+  <!-- HEADER / NAVBAR PADRONIZADA -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -68,6 +69,7 @@
           </div>
         </a>
 
+        <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
           <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
           <a href="modulos.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Módulos & Soluções</a>
@@ -78,13 +80,13 @@
         </nav>
 
         <div class="hidden sm:flex items-center gap-3">
-          <a href="contato.html" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Demonstração
+          <a href="index.html#piloto" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Participar do Piloto
           </a>
         </div>
 
         <div class="flex lg:hidden items-center">
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none" aria-label="Abrir Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -94,14 +96,14 @@
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
       <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
-      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções</a>
       <a href="como-funciona.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Como Funciona & FAQ</a>
       <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
-      <a href="sobre.html" class="block text-base font-semibold text-cyan-400">Sobre a MakerPixel</a>
-      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <a href="sobre.html" class="block text-base font-semibold text-cyan-400">Sobre Nós</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato</a>
       <div class="pt-4 border-t border-slate-800">
-        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
-          Agendar Demonstração Prática
+        <a href="index.html#piloto" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Quero Participar do Piloto
         </a>
       </div>
     </div>
@@ -115,63 +117,61 @@
       <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="tech-tag inline-block">Nossa História & Propósito</div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          Nascida em Tubarão para resolver a rotina contábil real
+          Engenharia de software voltada para a rotina contábil
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Conhecemos a realidade do escritório de contabilidade porque convivemos com as dores práticas de fechamento, conciliação e relacionamento com clientes.
+          A MakerPixel Techsystem nasceu para eliminar o trabalho braçal e repetitivo de escritórios de contabilidade através de automação limpa, segura e transparente.
         </p>
       </div>
 
-      <!-- HISTÓRIA E FUNDADOR -->
+      <!-- QUEM SOMOS & HISTÓRIA -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <div class="lg:col-span-7 space-y-5">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
-            Tubarão, Santa Catarina
-          </div>
-          
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
-            Por que criamos soluções focadas em escritórios contábeis?
+        <div class="lg:col-span-7 space-y-6">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Tecnologia direta com o desenvolvedor, sem intermediários
           </h2>
           
           <p class="text-slate-300 text-sm leading-relaxed">
-            A <strong>MakerPixel Techsystem</strong> foi fundada por <strong>Mauricio Goulart de Oliveira</strong> ao identificar um padrão constante na região: escritórios de contabilidade altamente competentes, mas sobrecarregados por tarefas manuais que roubam o tempo que deveria ser dedicado à consultoria de negócios.
-          </p>
-          
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Muitos escritórios tentavam contornar essa dor criando macros em Excel ou planilhas caseiras em VBA. No entanto, essas planilhas viviam quebrando com atualizações, geravam arquivos com caracteres inválidos e causavam retrabalho toda vez que o importador do sistema contábil rejeitava o lote.
+            Fundada por <strong>Mauricio Goulart de Oliveira</strong>, Engenheiro de Software especializado no ecossistema Java Enterprise e React, a MakerPixel une conhecimento técnico profundo em sistemas transacionais com a vivência real das dores operacionais de escritórios de contabilidade.
           </p>
 
           <p class="text-slate-300 text-sm leading-relaxed">
-            Decidimos construir uma ponte técnica estável: um software que entende o formato exato dos <strong>extratos de 9+ bancos</strong> e gera os arquivos oficiais para o <strong>SCI Único</strong> (e outros sistemas), com zero burocracia e suporte direto de quem realmente entende do assunto.
+            Identificamos que muitos escritórios perdem horas preciosas do mês cobrando clientes e baixando notas fiscais manualmente uma a uma, ou dependendo de ferramentas terceirizadas caras e burocráticas.
           </p>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Assim nasceu o <strong>NotaSync</strong>: um robô na nuvem que conecta diretamente à Secretaria de Estado da Fazenda de Santa Catarina (SEF/SC) e baixa as NFC-e de madrugada usando o certificado digital do contador, entregando os arquivos limpos e organizados para o fechamento fiscal.
+          </p>
+
+          <div class="pt-2 flex flex-wrap gap-4 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Santa Catarina & Brasil</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Atendimento com o desenvolvedor</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Foco em automação fiscal</span>
+          </div>
         </div>
 
-        <!-- Bloco Fundador -->
         <div class="lg:col-span-5">
-          <div class="glass-card rounded-3xl p-8 border-cyan-500/30 space-y-5">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-cyan-500 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-cyan-500/20">
-                MG
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white">Mauricio Goulart de Oliveira</h3>
-                <p class="text-xs text-cyan-300 font-mono">Fundador & Desenvolvedor Principal</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">Tubarão - SC</p>
-              </div>
+          <div class="glass-card rounded-3xl p-8 border-cyan-500/30 space-y-4 text-center">
+            <div class="w-20 h-20 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto text-2xl font-black">
+              MG
             </div>
-
-            <div class="border-t border-slate-800 pt-4 text-xs text-slate-300 space-y-2 leading-relaxed">
-              <p>
-                "O contador não precisa de mais um sistema gigante para aprender do zero. Ele precisa de uma ferramenta rápida que resolva a planilha que trava o fechamento dele no dia 10."
-              </p>
+            <div>
+              <h3 class="text-lg font-bold text-white">Mauricio Goulart de Oliveira</h3>
+              <p class="text-xs text-cyan-400">Fundador & Engenheiro de Software</p>
             </div>
-
-            <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs">
-              <span class="text-slate-400">Atendimento Direto:</span>
-              <a href="https://wa.me/5548984570272" target="_blank" class="text-cyan-400 hover:underline font-bold flex items-center gap-1">
-                <i data-lucide="phone" class="w-3.5 h-3.5"></i> (48) 98457-0272
+            <p class="text-xs text-slate-400 leading-relaxed text-left">
+              Especialista em arquitetura distribuída, Java 21, Spring Boot, React e segurança da informação. Dedicado a construir ferramentas robustas que entregam tempo e tranquilidade para o contador.
+            </p>
+            <div class="pt-3 border-t border-slate-800 flex items-center justify-center gap-3">
+              <a href="https://wa.me/5548984570272" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 transition-colors" title="WhatsApp">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </a>
+              <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 transition-colors" title="E-mail">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </a>
+              <a href="https://github.com/Mauricio-G-Oliveira" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors" title="GitHub">
+                <i data-lucide="github" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
@@ -179,63 +179,41 @@
 
       </div>
 
-      <!-- OS 3 PRINCÍPIOS DA MAKERPIXEL -->
-      <section class="space-y-8">
+      <!-- OS 3 PRINCÍPIOS FUNDAMENTAIS -->
+      <div class="space-y-8">
         <div class="text-center max-w-2xl mx-auto space-y-2">
-          <h2 class="text-2xl sm:text-3xl font-bold text-white">Nossos 3 Princípios Inegociáveis</h2>
-          <p class="text-slate-400 text-xs sm:text-sm">Como nós conduzimos cada implantação e atendimento.</p>
+          <div class="tech-tag inline-block">Nossos Valores</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Como nos posicionamos perante o seu escritório
+          </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold">
-              1
-            </div>
-            <h3 class="text-lg font-bold text-white">Linguagem de Contador</h3>
+            <span class="text-2xl font-black text-cyan-400 font-mono">01</span>
+            <h3 class="text-lg font-bold text-white">Honestidade Técnica</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Falamos sobre plano de contas, débito, crédito, histórico padrão (HP), competência e arquivos oficiais. A tecnologia é explicada de forma simples e prática, sem "tecniquês" inútil.
+              Só anunciamos o que já funciona em produção ou o status real de cada funcionalidade. Nada de promessas mirabolantes ou números fictícios de clientes.
             </p>
           </div>
 
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold">
-              2
-            </div>
-            <h3 class="text-lg font-bold text-white">Complementaridade, Não Disputa</h3>
+            <span class="text-2xl font-black text-cyan-400 font-mono">02</span>
+            <h3 class="text-lg font-bold text-white">Suporte Humano Sem 0800</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Não tentamos convencer o escritório a trocar o SCI Único, Domínio ou Questor. Nós aceleramos a entrada de dados para que o seu ERP funcione com seu potencial máximo.
+              O atendimento é feito diretamente pelo WhatsApp com quem desenvolve o software. Se você tiver uma dúvida sobre o webservice ou um arquivo, a resposta é técnica e rápida.
             </p>
           </div>
 
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold">
-              3
-            </div>
-            <h3 class="text-lg font-bold text-white">Atendimento Local Sem 0800</h3>
+            <span class="text-2xl font-black text-cyan-400 font-mono">03</span>
+            <h3 class="text-lg font-bold text-white">Solução Complementar</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Estamos aqui no Sul de Santa Catarina. Se você tiver um extrato novo de cooperativa local ou uma dúvida técnica, fala direto com Mauricio pelo WhatsApp.
+              Não pedimos para o seu escritório trocar de software contábil. Atuamos onde o sistema tradicional trava ou exige esforço manual repetitivo.
             </p>
           </div>
 
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 text-center space-y-6">
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
-          Vamos conversar sobre os gargalos do seu escritório?
-        </h3>
-        <p class="text-slate-300 text-sm max-w-xl mx-auto">
-          Podemos agendar uma visita presencial em Tubarão e cidades vizinhas ou uma demonstração online rápida.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="contato.html" class="btn-gradient-primary px-8 py-3.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
-            Agendar Demonstração Prática
-          </a>
-          <a href="https://wa.me/5548984570272" target="_blank" class="px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-slate-700 hover:border-cyan-400">
-            Conversar no WhatsApp Direto
-          </a>
         </div>
       </div>
 
@@ -246,6 +224,7 @@
   <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
         <div class="flex items-center gap-3">
           <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
             <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -261,16 +240,16 @@
           </div>
           <div>
             <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
-            <span class="block text-[11px] text-slate-500">Desenvolvimento local com foco em produtividade contábil</span>
+            <span class="block text-[11px] text-slate-500">NotaSync & Central Contábil • Santa Catarina</span>
           </div>
         </div>
 
         <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
           <a href="index.html" class="hover:text-cyan-400">Início</a>
-          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
-          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona & FAQ</a>
           <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
-          <a href="sobre.html" class="text-cyan-400 font-bold">Sobre Nós</a>
+          <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
           <a href="contato.html" class="hover:text-cyan-400">Contato</a>
           <a href="outros-projetos.html" class="text-slate-500 hover:text-slate-300">Outros Projetos</a>
         </div>
@@ -283,11 +262,12 @@
             <i data-lucide="mail" class="w-4 h-4"></i>
           </a>
         </div>
+
       </div>
 
       <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
-        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
-        <p>Atendimento prioritário em Tubarão e Sul de Santa Catarina.</p>
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Santa Catarina.</p>
+        <p>Atendimento direto com o desenvolvedor • WhatsApp: (48) 98457-0272</p>
       </div>
     </div>
   </footer>

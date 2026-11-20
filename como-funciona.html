@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Como Funciona & FAQ Contábil | MakerPixel Techsystem</title>
+  <title>Como Funciona & FAQ | MakerPixel NotaSync</title>
   
-  <meta name="description" content="Entenda como funciona a implantação, parametrização e suporte direto da MakerPixel para escritórios de contabilidade. Perguntas frequentes sobre o SCI Único e rotina contábil.">
+  <meta name="description" content="Entenda como funciona o NotaSync para escritórios de contabilidade em Santa Catarina: implantação, captura de NFC-e na SEF/SC e respostas para dúvidas frequentes.">
+  <meta name="keywords" content="NotaSync, como funciona NotaSync, download NFC-e SEF SC, certificado contador, tecnologia contábil Santa Catarina, MakerPixel">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="apple-touch-icon" href="assets/img/logo.svg">
   
@@ -40,7 +41,7 @@
 </head>
 <body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER -->
+  <!-- HEADER / NAVBAR PADRONIZADA -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -68,6 +69,7 @@
           </div>
         </a>
 
+        <!-- Desktop Nav -->
         <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
           <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Início</a>
           <a href="modulos.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Módulos & Soluções</a>
@@ -78,13 +80,13 @@
         </nav>
 
         <div class="hidden sm:flex items-center gap-3">
-          <a href="contato.html" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Demonstração
+          <a href="index.html#piloto" class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Participar do Piloto
           </a>
         </div>
 
         <div class="flex lg:hidden items-center">
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none" aria-label="Abrir Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -94,14 +96,14 @@
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
       <a href="index.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Início</a>
-      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções</a>
       <a href="como-funciona.html" class="block text-base font-semibold text-cyan-400">Como Funciona & FAQ</a>
       <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
-      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
-      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre Nós</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato</a>
       <div class="pt-4 border-t border-slate-800">
-        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
-          Agendar Demonstração Prática
+        <a href="index.html#piloto" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Quero Participar do Piloto
         </a>
       </div>
     </div>
@@ -115,10 +117,10 @@
       <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="tech-tag inline-block">Passo a Passo & Suporte</div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          Como funciona a parceria com a MakerPixel
+          Como funciona o NotaSync na prática
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Sem burocracias, sem contratos de fidelidade abusivos e com suporte direto com quem programa. Veja o caminho da implantação até as respostas para as dúvidas mais comuns dos contadores.
+          Sem burocracias, sem contratos abusivos e com suporte direto com quem desenvolve. Conheça as etapas de implantação e as respostas para as principais dúvidas do setor fiscal.
         </p>
       </div>
 
@@ -129,12 +131,12 @@
           <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
             01
           </div>
-          <h3 class="text-lg font-bold text-white">Diagnóstico da Rotina</h3>
+          <h3 class="text-lg font-bold text-white">Alinhamento Inicial</h3>
           <p class="text-slate-300 text-xs leading-relaxed">
-            Em uma conversa rápida de 30 minutos (online ou presencial em Tubarão e região), mapeamos quais clientes e bancos tomam mais tempo do seu setor contábil.
+            Em uma conversa rápida de 15 minutos, alinhamos a carteira de clientes de Santa Catarina que emitem NFC-e e preparamos o ambiente.
           </p>
           <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
-            Duração: 1 dia
+            Duração: Imediato
           </span>
         </div>
 
@@ -142,12 +144,12 @@
           <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
             02
           </div>
-          <h3 class="text-lg font-bold text-white">Parametrização Ágil</h3>
+          <h3 class="text-lg font-bold text-white">Envio do Certificado A1</h3>
           <p class="text-slate-300 text-xs leading-relaxed">
-            Configuramos as regras de contrapartida, histórico padrão (HP) e os códigos de unidade do SCI Único conforme o plano de contas adotado pelo escritório.
+            Você envia o certificado A1 do contador. Ele é armazenado com criptografia forte e usado estritamente para consultas fiscais na SEF/SC.
           </p>
           <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
-            Duração: 1 a 3 dias
+            Cofre digital seguro
           </span>
         </div>
 
@@ -155,12 +157,12 @@
           <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center font-bold text-lg font-mono">
             03
           </div>
-          <h3 class="text-lg font-bold text-white">Treinamento Prático</h3>
+          <h3 class="text-lg font-bold text-white">Importação & SAT</h3>
           <p class="text-slate-300 text-xs leading-relaxed">
-            Realizamos uma sessão prática com a equipe do escritório, importando extratos reais e gerando o lote de teste para importação no sistema contábil.
+            Subimos a relação de CNPJs. O sistema valida se o contador está vinculado no SAT da SEF/SC para cada uma das empresas cadastradas.
           </p>
           <span class="text-[11px] text-cyan-300 font-semibold block pt-2 border-t border-slate-800">
-            Duração: 1 sessão prática
+            Checagem automática
           </span>
         </div>
 
@@ -168,33 +170,28 @@
           <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-lg font-mono">
             04
           </div>
-          <h3 class="text-lg font-bold text-white">Suporte Direto no WhatsApp</h3>
+          <h3 class="text-lg font-bold text-white">Primeira Busca & Treinamento</h3>
           <p class="text-slate-300 text-xs leading-relaxed">
-            Durante o fechamento do mês, se surgir qualquer extrato fora do padrão ou dúvida operacional, o contato é direto com Mauricio. Sem 0800.
+            Na madrugada seguinte os XMLs são baixados. Mostramos para a sua equipe como filtrar e baixar o ZIP do mês para importar no sistema contábil.
           </p>
           <span class="text-[11px] text-emerald-400 font-semibold block pt-2 border-t border-slate-800">
-            Contínuo & Humanizado
+            Suporte direto no WhatsApp
           </span>
         </div>
 
       </div>
 
       <!-- ==============================================================
-           DEMONSTRAÇÃO DO SISTEMA EM VÍDEO (VEJA ANTES DE AGENDAR)
+           DEMONSTRAÇÃO DO SISTEMA EM VÍDEO
            ============================================================== -->
-      <section class="max-w-5xl mx-auto space-y-8">
+      <section class="max-w-4xl mx-auto space-y-8">
         <div class="text-center space-y-3">
-          <div class="flex items-center justify-center gap-2 flex-wrap">
-            <span class="video-pulse-badge">Carro-Chefe em Ação</span>
-            <span class="text-[11px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full">
-              Demonstração Real • 2 Minutos
-            </span>
-          </div>
+          <span class="video-pulse-badge">Plataforma MakerPixel</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Veja como funciona na tela do seu computador
+            Conheça a Central Contábil
           </h2>
           <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-            Antes de agendar uma demonstração, assista ao vídeo comercial da <strong>Central Contábil</strong> realizando a conciliação bancária multi-extratos e gerando o lote oficial para o <strong>SCI Único</strong>.
+            Visão geral da plataforma; o vídeo demonstrativo do NotaSync estará disponível em breve.
           </p>
         </div>
 
@@ -205,22 +202,22 @@
               <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
               <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
               <span class="text-slate-300 font-mono text-[11px] ml-2 hidden sm:inline">
-                apresentacao-comercial-central-contabil.mp4
+                Central Contábil • Visão Geral
               </span>
             </div>
-            <div class="flex items-center gap-2 font-mono text-[11px] text-emerald-400">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              FLUXO OPERACIONAL COMPLETO
+            <div class="flex items-center gap-2 font-mono text-[11px] text-slate-400">
+              1080p Full HD • 02:05 min
             </div>
           </div>
 
           <div class="relative bg-black aspect-video flex items-center justify-center">
             <video 
               controls 
-              preload="metadata" 
+              preload="none"
+              poster="assets/img/central-contabil-poster.svg"
               playsinline
               class="w-full h-full object-contain bg-slate-950"
-              title="Apresentação Comercial Central Contábil - MakerPixel Techsystem">
+              title="Conheça a Central Contábil - MakerPixel Techsystem">
               <source src="assets/video/apresentacao-comercial-central-contabil.mp4" type="video/mp4">
               Seu navegador não suporta reprodução de vídeos HTML5.
             </video>
@@ -228,15 +225,15 @@
         </div>
       </section>
 
-      <!-- FAQ DETALHADO DO CONTADOR -->
+      <!-- FAQ DETALHADO DO NOTASYNC -->
       <section class="max-w-4xl mx-auto space-y-8">
         <div class="text-center space-y-3">
           <div class="tech-tag inline-block">Dúvidas Frequentes</div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Perguntas Frequentes de Escritórios Contábeis
+            Perguntas Frequentes sobre o NotaSync
           </h2>
           <p class="text-slate-400 text-xs sm:text-sm">
-            Respostas claras e diretas para as principais dúvidas de sócios e gestores contábeis.
+            Tire suas dúvidas técnicas e operacionais sobre a captura de notas na SEF/SC.
           </p>
         </div>
 
@@ -244,102 +241,84 @@
           
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer" open>
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>A MakerPixel substitui o SCI Único, Domínio ou Questor?</span>
+              <span>Funciona para outros estados além de Santa Catarina?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                <strong>Não! De forma alguma.</strong> Nós não somos um ERP contábil concorrente.
-              </p>
-              <p>
-                A MakerPixel atua na etapa <em>anterior</em> à escrituração: onde seu analista gasta horas recebendo extratos bagunçados dos clientes, convertendo PDFs e tentando conciliar manualmente. Nós organizamos os dados e geramos os arquivos de lote oficiais no padrão exato que o <strong>SCI Único</strong> importa de forma limpa, rápida e sem erros.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Por enquanto exclusivamente para empresas de <strong>Santa Catarina</strong>. O NotaSync foi desenvolvido utilizando o serviço oficial da Secretaria de Estado da Fazenda (SEF/SC).
             </div>
           </details>
 
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>Quanto tempo leva para implantar e ver resultado?</span>
+              <span>Preciso do certificado digital de cada empresa atendida?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                A implantação é praticamente imediata. Como o sistema roda em nuvem segura ou diretamente no navegador, em menos de <strong>3 dias úteis</strong> o escritório já está com as contas parametrizadas e processando os primeiros lotes de extratos da competência.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Para as NFC-e (modelo 65), <strong>não</strong>. O certificado digital A1 do próprio contador é suficiente para baixar as notas de todas as empresas clientes, desde que o contabilista esteja devidamente vinculado ao CNPJ da empresa no SAT da SEF/SC.
             </div>
           </details>
 
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>E se tivermos um cliente com formato de extrato muito específico ou cooperativa regional?</span>
+              <span>E se o contador não estiver vinculado no SAT de alguma empresa?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                Esse é o nosso maior diferencial competitivo: <strong>você fala direto com o desenvolvedor</strong>. 
-              </p>
-              <p>
-                Diferente de grandes fornecedores de software onde você abre um chamado e espera semanas, na MakerPixel ajustamos o leitor do extrato diretamente para acolher o modelo do seu cliente em prazo recorde.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              O painel do NotaSync identifica automaticamente a rejeição e exibe o alerta: <em>"Contador sem vínculo no SAT"</em>. Assim você sabe com precisão cirúrgica qual empresa precisa regularizar o vínculo de contabilista no portal da SEF.
             </div>
           </details>
 
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>Como funciona o suporte no dia a dia durante o fechamento de mês?</span>
+              <span>Funciona com certificado A3 em token ou cartão?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                O suporte é realizado via canal direto no WhatsApp: <strong>(48) 98457-0272</strong>.
-              </p>
-              <p>
-                Sabemos que o fechamento contábil tem prazos inegociáveis. Se houver qualquer dúvida ou inconsistência na importação, atendemos com prioridade máxima e sem transferir você para filas de espera.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Não na nuvem. Como o NotaSync é um serviço em nuvem que executa buscas automáticas de madrugada sem ninguém precisar digitar PIN na máquina, é necessário o certificado digital do tipo <strong>A1 (arquivo .pfx ou .p12)</strong>.
             </div>
           </details>
 
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>Como fica a segurança dos dados e o sigilo dos clientes (LGPD)?</span>
+              <span>Funciona com o meu sistema contábil atual?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                Levamos a segurança e o sigilo a sério. O sistema conta com controle de acesso por níveis de usuário (Operador, Contador/Fiscal e Administrador), criptografia e não comercializa ou expõe dados a terceiros. Conheça nossa política detalhada na página <a href="seguranca.html" class="text-cyan-400 underline font-semibold">Segurança & LGPD</a>.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Sim, com qualquer um. O NotaSync entrega os arquivos XML oficiais no formato padrão nacional, organizados em pacotes ZIP por mês e empresa. Você importa no seu sistema contábil exatamente da forma que já faz hoje.
             </div>
           </details>
 
           <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
             <summary class="font-bold text-white text-base flex items-center justify-between list-none">
-              <span>Como é o modelo de cobrança?</span>
+              <span>Quanto tempo os XMLs ficam guardados na plataforma?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
             </summary>
-            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800 space-y-2">
-              <p>
-                Trabalhamos com planos dimensionados conforme o porte do escritório e o volume de empresas/contas atendidas, sem custos surpresa por usuário extra e com retorno sobre o investimento visível já no primeiro mês de uso.
-              </p>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Os arquivos XML e os pacotes de download permanecem armazenados com segurança por <strong>13 meses</strong>, garantindo que você tenha o histórico completo da competência anual e backups à mão.
             </div>
           </details>
 
         </div>
       </section>
 
-      <!-- CTA -->
-      <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 text-center space-y-6">
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
-          Ainda ficou com alguma dúvida sobre a rotina contábil?
-        </h3>
+      <!-- Chamada para Ação Final -->
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 text-center max-w-3xl mx-auto space-y-6">
+        <span class="video-pulse-badge">Vagas Limitadas para Santa Catarina</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Pronto para automatizar a captura de NFC-e?
+        </h2>
         <p class="text-slate-300 text-sm max-w-xl mx-auto">
-          Vamos bater um papo rápido. Conhecemos a realidade dos escritórios de Tubarão e estamos à disposição para demonstrar a ferramenta.
+          Participe do programa piloto gratuito do NotaSync e pare de perder tempo baixando notas manualmente.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="contato.html" class="w-full sm:w-auto btn-gradient-primary px-8 py-3.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
-            Solicitar Demonstração
+          <a href="index.html#piloto" class="w-full sm:w-auto btn-gradient-primary px-8 py-4 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center justify-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            Quero Participar do Piloto
           </a>
-          <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Li%20o%20FAQ%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20espec%C3%ADfica%20do%20meu%20escrit%C3%B3rio." target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-slate-700 hover:border-cyan-400">
-            Falar Diretamente no WhatsApp
+          <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20NotaSync." target="_blank" class="w-full sm:w-auto px-6 py-4 rounded-xl text-xs font-bold text-slate-200 bg-slate-900 border border-slate-700 hover:border-cyan-400 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+            Tirar Dúvidas no WhatsApp
           </a>
         </div>
       </div>
@@ -351,6 +330,7 @@
   <footer class="bg-[#05070c] border-t border-slate-900 py-12 text-slate-400 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
         <div class="flex items-center gap-3">
           <div class="p-1.5 rounded-lg bg-slate-900 border border-cyan-500/30">
             <svg class="w-6 h-6" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -366,14 +346,14 @@
           </div>
           <div>
             <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
-            <span class="block text-[11px] text-slate-500">Implantação rápida e suporte direto</span>
+            <span class="block text-[11px] text-slate-500">NotaSync & Central Contábil • Santa Catarina</span>
           </div>
         </div>
 
         <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
           <a href="index.html" class="hover:text-cyan-400">Início</a>
-          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
-          <a href="como-funciona.html" class="text-cyan-400 font-bold">Como Funciona</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona & FAQ</a>
           <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
           <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
           <a href="contato.html" class="hover:text-cyan-400">Contato</a>
@@ -388,11 +368,12 @@
             <i data-lucide="mail" class="w-4 h-4"></i>
           </a>
         </div>
+
       </div>
 
       <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
-        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
-        <p>Atendimento direto ao contador • Sem 0800</p>
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Santa Catarina.</p>
+        <p>Atendimento direto com o desenvolvedor • WhatsApp: (48) 98457-0272</p>
       </div>
     </div>
   </footer>

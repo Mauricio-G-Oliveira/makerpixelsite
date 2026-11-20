@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MakerPixel Techsystem | Tecnologia para Escritórios de Contabilidade</title>
+  <title>MakerPixel | NotaSync — XML das NFC-e direto da SEF/SC para escritórios de contabilidade</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="Tecnologia para escritórios de contabilidade em Tubarão, Sul de SC e Brasil. Conciliação bancária multi-extratos, integração com o SCI Único e menos planilhas na sua rotina.">
-  <meta name="keywords" content="escritório contábil Tubarão, software contábil SC, conciliação bancária SCI Único, integração contábil, importação de extratos, tecnologia contábil, MakerPixel Techsystem, Mauricio Goulart">
+  <meta name="description" content="Baixe automaticamente os XMLs das NFC-e dos clientes do seu escritório de contabilidade direto da SEF/SC, usando o certificado do contador, sem pagar serviços terceirizados.">
+  <meta name="keywords" content="NotaSync, NFC-e Santa Catarina, XML NFC-e SEF SC, download automatico NFC-e, tecnologia contabil, automacao contabil SC, Central Contabil, MakerPixel">
   <meta name="author" content="Mauricio Goulart de Oliveira - MakerPixel Techsystem">
   
+  <!-- Open Graph -->
+  <meta property="og:title" content="MakerPixel | NotaSync — XML das NFC-e direto da SEF/SC para escritórios de contabilidade">
+  <meta property="og:description" content="Baixe automaticamente os XMLs das NFC-e dos seus clientes todo dia, de madrugada, direto da SEF/SC com o certificado do contador.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mauricio-g-oliveira.github.io/makerpixelsite/">
+  <meta property="og:image" content="assets/img/central-contabil-poster.svg">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="apple-touch-icon" href="assets/img/logo.svg">
@@ -52,7 +59,7 @@
 <body class="bg-[#070B14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-cyber-grid min-h-screen flex flex-col justify-between">
 
   <!-- ==============================================================
-       HEADER / NAVBAR MULTI-PÁGINAS
+       HEADER / NAVBAR MULTI-PÁGINAS (PADRONIZADA)
        ============================================================== -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,40 +99,40 @@
           <a href="contato.html" class="text-slate-300 hover:text-cyan-400 transition-colors">Contato</a>
         </nav>
 
-        <!-- CTA & Localização -->
+        <!-- CTA & Localização Estadual -->
         <div class="hidden sm:flex items-center gap-3">
           <span class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i> Tubarão & Região
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i> Santa Catarina
           </span>
-          <a href="contato.html" 
+          <a href="#piloto" 
              class="btn-gradient-primary px-4 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4"></i>
-            Agendar Demonstração
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            Participar do Piloto
           </a>
         </div>
 
         <!-- Botão Menu Mobile -->
         <div class="flex lg:hidden items-center">
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 focus:outline-none" aria-label="Abrir Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Dropdown Mobile Menu -->
+    <!-- Dropdown Mobile Menu Padronizado -->
     <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0f1d]/98 backdrop-blur-xl border-b border-cyan-500/20 px-6 py-6 space-y-4">
       <a href="index.html" class="block text-base font-semibold text-cyan-400">Início</a>
-      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções Contábeis</a>
+      <a href="modulos.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Módulos & Soluções</a>
       <a href="como-funciona.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Como Funciona & FAQ</a>
       <a href="seguranca.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Segurança & LGPD</a>
-      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre a MakerPixel</a>
-      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato & Diagnóstico</a>
+      <a href="sobre.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Sobre Nós</a>
+      <a href="contato.html" class="block text-base font-medium text-slate-200 hover:text-cyan-400">Contato</a>
       <div class="pt-4 border-t border-slate-800 space-y-2">
-        <a href="contato.html" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
-          Agendar Demonstração Prática
+        <a href="#piloto" class="w-full text-center block btn-gradient-primary py-3 rounded-xl text-sm font-bold text-slate-950 uppercase tracking-wider">
+          Quero Participar do Piloto
         </a>
-        <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Sou%20de%20escrit%C3%B3rio%20cont%C3%A1bil%20e%20gostaria%20de%20falar%20no%20WhatsApp." target="_blank" class="w-full text-center block bg-slate-900 border border-slate-700 py-2.5 rounded-xl text-xs font-bold text-white">
+        <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Sou%20de%20escrit%C3%B3rio%20cont%C3%A1bil%20em%20SC%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20NotaSync." target="_blank" class="w-full text-center block bg-slate-900 border border-slate-700 py-2.5 rounded-xl text-xs font-bold text-white">
           Falar no WhatsApp (48) 98457-0272
         </a>
       </div>
@@ -133,7 +140,7 @@
   </header>
 
   <!-- ==============================================================
-       HERO SECTION - POSICIONAMENTO B2B CONTÁBIL
+       HERO SECTION - NOTASYNC NO CENTRO
        ============================================================== -->
   <main class="flex-grow pt-28">
     <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-radial-gradient">
@@ -143,121 +150,154 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Texto de Apresentação -->
+          <!-- Texto de Apresentação Hero -->
           <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <!-- Badges de Autoridade & Localidade -->
+            <!-- Selos Honestos de Posicionamento -->
             <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/30 text-cyan-300 text-xs font-semibold tracking-wide">
-                <i data-lucide="building-2" class="w-3.5 h-3.5 text-cyan-400"></i>
-                Para Escritórios de Contabilidade
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-300 text-xs font-semibold tracking-wide">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i>
+                Só para Santa Catarina
               </span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-300 text-xs font-medium">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
-                Tubarão e Sul de SC • Brasil
+                <i data-lucide="key" class="w-3.5 h-3.5 text-amber-400"></i>
+                Um certificado do contador para todas as empresas
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
+                <i data-lucide="gift" class="w-3.5 h-3.5 text-emerald-400"></i>
+                Teste grátis no piloto
               </span>
             </div>
 
-            <!-- Frase Principal de Posicionamento -->
+            <!-- H1 Oficial Conforme Prompt -->
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-white">
-              Tecnologia para escritórios de contabilidade. <br class="hidden sm:inline">
-              <span class="text-gradient-cyan">Menos planilha, menos retrabalho, mais tempo para o cliente.</span>
+              Os XMLs das NFC-e dos seus clientes, todo dia, <br class="hidden sm:inline">
+              <span class="text-gradient-cyan">direto da SEF/SC.</span>
             </h1>
 
-            <!-- Subtítulo Explicativo & Postura Complementar -->
+            <!-- Subtítulo Explicativo Conforme Prompt -->
             <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Automatize a <strong>conciliação bancária multi-extratos</strong> e elimine a digitação manual importando lotes limpos diretamente para o <strong>SCI Único</strong>. 
-              Nós não pedimos para o seu escritório trocar de ERP — complementamos e resolvemos onde a planilha trava sua equipe.
+              O <strong>NotaSync</strong> usa o certificado do contador para baixar as <strong>NFC-e (modelo 65)</strong> automaticamente, de madrugada. Sem planilha, sem download manual e sem pagar serviço terceirizado por isso.
             </p>
 
             <!-- CTAs Primários -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-              <a href="contato.html" 
+              <a href="#piloto" 
                  class="w-full sm:w-auto btn-gradient-primary px-7 py-4 rounded-xl text-sm font-extrabold text-slate-950 uppercase tracking-wider flex items-center justify-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4"></i>
-                Agendar Demonstração
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                Quero Participar do Piloto
               </a>
-              <a href="#video-demonstracao" 
+              <a href="#como-funciona" 
                  class="w-full sm:w-auto px-6 py-4 rounded-xl text-sm font-bold text-cyan-300 bg-cyan-950/60 border border-cyan-500/40 hover:bg-cyan-900/60 hover:text-white hover:border-cyan-400 transition-all flex items-center justify-center gap-2">
-                <i data-lucide="play-circle" class="w-4 h-4 text-cyan-400"></i>
-                Assistir Vídeo Demo (2 min)
+                <i data-lucide="arrow-down-circle" class="w-4 h-4 text-cyan-400"></i>
+                Ver Como Funciona
               </a>
-              <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Sou%20de%20um%20escrit%C3%B3rio%20cont%C3%A1bil%20e%20gostaria%20de%20conversar%20sobre%20a%20concilia%C3%A7%C3%A3o%20e%20integra%C3%A7%C3%A3o%20SCI." 
+              <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Tenho%20interesse%20no%20piloto%20do%20NotaSync%20para%20baixar%20NFC-e%20direto%20da%20SEF/SC." 
                  target="_blank"
                  rel="noopener noreferrer"
                  class="w-full sm:w-auto px-6 py-4 rounded-xl text-sm font-bold text-slate-200 bg-slate-900 border border-slate-700 hover:border-emerald-500/60 hover:text-white transition-all flex items-center justify-center gap-2">
                 <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-                WhatsApp Direto
+                Falar no WhatsApp
               </a>
             </div>
 
-            <!-- Destaques Sem 0800 -->
+            <!-- Fatos Reais (Sem Estatísticas Fictícias) -->
             <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400">
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Sem atendente de 0800</span>
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Conhece a rotina de Tubarão</span>
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Compatível com SCI Único</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Busca automática diária</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Certificado criptografado</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Suporte direto com o desenvolvedor</span>
             </div>
 
           </div>
 
-          <!-- Console Visual da Solução Contábil -->
+          <!-- Mock do Painel NotaSync com Dados Fictícios -->
           <div class="lg:col-span-5 relative">
             <div class="glass-card rounded-2xl p-6 border-cyan-500/30 shadow-2xl shadow-cyan-950/60">
               
-              <!-- Barra de status -->
+              <!-- Barra de status do Console -->
               <div class="code-window-bar -mx-6 -mt-6 px-4 py-3 rounded-t-2xl flex items-center justify-between mb-4">
                 <div class="flex items-center gap-2">
                   <span class="w-3 h-3 rounded-full bg-rose-500/90 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-amber-500/90 inline-block"></span>
                   <span class="w-3 h-3 rounded-full bg-emerald-500/90 inline-block"></span>
-                  <span class="text-xs text-slate-400 font-mono ml-2">makerpixel-contabil.sci</span>
+                  <span class="text-xs text-slate-400 font-mono ml-2">notasync.sef.sc</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
-                  LAYOUT SCI ÚNICO VALIDADO
+                <span class="text-[10px] text-cyan-300 font-mono font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30">
+                  PROGRAMA PILOTO
                 </span>
               </div>
 
-              <!-- Simulação do Painel de Conciliação -->
-              <div class="space-y-3 font-mono text-xs">
-                <div class="p-3 rounded-xl bg-slate-900/95 border border-slate-800">
-                  <div class="flex items-center justify-between text-[11px] text-slate-400 mb-1.5">
-                    <span>STATUS DA COMPETÊNCIA</span>
-                    <span class="text-cyan-400 font-semibold">98.4% Concluído</span>
+              <!-- Indicadores do Painel -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 font-mono text-center">
+                <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                  <span class="text-[10px] text-slate-400 block uppercase">Empresas</span>
+                  <span class="text-base font-bold text-white">42</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                  <span class="text-[10px] text-slate-400 block uppercase">NFC-e / Mês</span>
+                  <span class="text-base font-bold text-cyan-400">18.350</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                  <span class="text-[10px] text-slate-400 block uppercase">Canceladas</span>
+                  <span class="text-base font-bold text-rose-400">112</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800">
+                  <span class="text-[10px] text-slate-400 block uppercase">Próx. Busca</span>
+                  <span class="text-base font-bold text-emerald-400">02:00</span>
+                </div>
+              </div>
+
+              <!-- Lista Fictícia de Empresas & Status de Vínculo SAT -->
+              <div class="space-y-2 font-mono text-xs">
+                
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <span class="text-slate-200 font-medium block">Supermercado Alvorada Ltda</span>
+                    <span class="text-[10px] text-slate-500">CNPJ: 12.345.678/0001-90 • 4.120 notas</span>
                   </div>
-                  <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                    <div class="bg-cyan-500 h-full rounded-full" style="width: 98.4%"></div>
-                  </div>
+                  <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
+                    Sincronizado
+                  </span>
                 </div>
 
-                <!-- Detalhes de Lançamentos -->
-                <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-2">
-                  <div class="flex justify-between items-center text-slate-300">
-                    <span>Extratos Lidos (OFX/PDF/CSV):</span>
-                    <span class="text-white font-bold">1.428 lançamentos</span>
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <span class="text-slate-200 font-medium block">Padaria & Confeitaria Central</span>
+                    <span class="text-[10px] text-slate-500">CNPJ: 23.456.789/0001-01 • 1.840 notas</span>
                   </div>
-                  <div class="flex justify-between items-center text-slate-300">
-                    <span>Reconhecimento por CNPJ/Histórico:</span>
-                    <span class="text-emerald-400 font-bold">1.405 identificados</span>
-                  </div>
-                  <div class="flex justify-between items-center text-slate-300 border-t border-slate-800 pt-2">
-                    <span>Arquivo Oficial para o SCI:</span>
-                    <span class="text-cyan-300 font-semibold">UNICO_LOTE_01.txt (Pronto)</span>
-                  </div>
+                  <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
+                    Sincronizado
+                  </span>
                 </div>
 
-                <!-- Aviso de Integração sem Troca de ERP -->
-                <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-[11px] text-slate-300 flex items-start gap-2.5">
-                  <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
-                  <span>Zero conflito de software: atua como ferramenta auxiliar para acelerar o fechamento contábil.</span>
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <span class="text-slate-200 font-medium block">Auto Posto Litoral Norte</span>
+                    <span class="text-[10px] text-slate-500">CNPJ: 34.567.890/0001-12 • 6.290 notas</span>
+                  </div>
+                  <span class="text-[10px] text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
+                    Sincronizado
+                  </span>
                 </div>
+
+                <div class="p-2.5 rounded-xl bg-amber-950/30 border border-amber-500/40 flex items-center justify-between">
+                  <div>
+                    <span class="text-amber-200 font-medium block">Farmácia & Drogaria Sul</span>
+                    <span class="text-[10px] text-amber-400/80">CNPJ: 45.678.901/0001-23 • 0 notas</span>
+                  </div>
+                  <span class="text-[10px] text-amber-300 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/40">
+                    Contador sem vínculo no SAT
+                  </span>
+                </div>
+
               </div>
 
               <!-- Rodapé do Card -->
               <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-                <span class="text-slate-300 flex items-center gap-1.5">
-                  <i data-lucide="user-check" class="w-3.5 h-3.5 text-cyan-400"></i> Atendimento: Mauricio
+                <span class="text-slate-400 text-[11px] flex items-center gap-1.5">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i> Dados fictícios de demonstração
                 </span>
-                <span class="text-cyan-400 font-semibold">Tubarão - SC</span>
+                <span class="text-cyan-400 font-semibold text-[11px]">SEF/SC Direto</span>
               </div>
 
             </div>
@@ -268,215 +308,147 @@
     </section>
 
     <!-- ==============================================================
-         SEÇÃO PRINCIPAL: O CARRO-CHEFE EM AÇÃO (VÍDEO DEMONSTRAÇÃO)
+         SEÇÃO: COMO FUNCIONA O NOTASYNC (4 PASSOS DIRETOS)
          ============================================================== -->
-    <section id="video-demonstracao" class="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#070B14] via-[#091020] to-[#070B14] border-y border-cyan-500/30">
-      <!-- Glows de ambientação -->
-      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-cyan-500/15 rounded-full blur-[150px] pointer-events-none"></div>
-      
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
-        
-        <!-- Cabeçalho do Vídeo -->
-        <div class="text-center max-w-3xl mx-auto space-y-4">
-          <div class="flex items-center justify-center gap-2 flex-wrap">
-            <span class="video-pulse-badge">
-              Carro-Chefe MakerPixel
-            </span>
-            <span class="text-[11px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full flex items-center gap-1.5">
-              <i data-lucide="video" class="w-3.5 h-3.5 text-emerald-400"></i> Demonstração Real do Sistema • 2 Minutos
-            </span>
-          </div>
-
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-            Veja a <span class="text-gradient-cyan">Central Contábil</span> operando na prática
-          </h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Sem promessas em slides: assista à leitura de extratos bancários, classificação inteligente por histórico e geração do arquivo oficial <code class="text-cyan-300 font-mono text-xs">UNICO.txt</code> pronto para importação no <strong>SCI Único</strong>.
-          </p>
-        </div>
-
-        <!-- Player de Vídeo em Moldura Cyber High-Tech -->
-        <div class="max-w-5xl mx-auto">
-          <div class="video-glow-frame">
-            <!-- Barra Superior do Player Estilo Terminal / macOS -->
-            <div class="code-window-bar px-4 py-3 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                <span class="text-slate-300 font-mono text-[11px] ml-2 hidden sm:inline">
-                  apresentacao-comercial-central-contabil.mp4
-                </span>
-              </div>
-              <div class="flex items-center gap-3 font-mono text-[11px]">
-                <span class="text-slate-400 hidden md:inline">1080p Full HD</span>
-                <span class="text-slate-500 hidden md:inline">•</span>
-                <span class="text-slate-400">02:05 min</span>
-                <span class="text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 rounded text-[10px]">
-                  AO VIVO NO SISTEMA
-                </span>
-              </div>
-            </div>
-
-            <!-- Vídeo HTML5 Nativo com Suporte Universal -->
-            <div class="relative bg-black aspect-video flex items-center justify-center">
-              <video 
-                id="main-showcase-video"
-                controls 
-                preload="metadata" 
-                playsinline
-                class="w-full h-full object-contain bg-slate-950"
-                title="Apresentação Comercial Central Contábil - MakerPixel Techsystem">
-                <source src="assets/video/apresentacao-comercial-central-contabil.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeos HTML5.
-              </video>
-            </div>
-
-            <!-- Rodapé da Moldura com Destaques do que é mostrado no vídeo -->
-            <div class="p-4 sm:p-6 bg-slate-950/95 border-t border-slate-800/80">
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-                
-                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
-                  <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold">
-                    1
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-white text-sm">Importação Multi-Bancos</h4>
-                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">Lê OFX, PDFs bancários e CSVs de Sicoob, Sicredi, Caixa, BB, Itaú e outros 9 bancos.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
-                  <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold">
-                    2
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-white text-sm">Reconhecimento por CNPJ</h4>
-                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">Sugere contas de débito/crédito e memoriza o plano de contas da empresa para confirmação em lote.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
-                  <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0 font-bold">
-                    3
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-white text-sm">Lote Oficial SCI Único</h4>
-                    <p class="text-slate-400 text-xs mt-1 leading-relaxed">Gera arquivo TXT 16 colunas em UTF-8 com BOM e valida inconsistências antes de importar.</p>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- CTA Imediato sob o Vídeo -->
-              <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="text-center sm:text-left">
-                  <p class="text-white text-sm font-bold">Quer testar com o extrato mais complexo do seu escritório?</p>
-                  <p class="text-slate-400 text-xs">Agendamos uma demonstração prática de 20 minutos direto no WhatsApp.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-                  <a href="#diagnostico" class="w-full sm:w-auto btn-gradient-primary px-5 py-3 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex items-center justify-center gap-2">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    Agendar Demonstração
-                  </a>
-                  <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Mauricio!%20Acabei%20de%20assistir%20ao%20v%C3%ADdeo%20da%20Central%20Cont%C3%A1bil%20no%20site%20e%20gostaria%20de%20conversar%20sobre%20a%20implanta%C3%A7%C3%A3o%20no%20meu%20escrit%C3%B3rio." 
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     class="w-full sm:w-auto px-5 py-3 rounded-xl text-xs font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-500/40 hover:bg-emerald-900/50 transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    Falar no WhatsApp
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==============================================================
-         SEÇÃO: AS DORES DO ESCRITÓRIO CONTÁBIL
-         ============================================================== -->
-    <section class="py-20 bg-slate-950/60 border-y border-slate-800/80">
+    <section id="como-funciona" class="py-20 bg-slate-950/60 border-t border-slate-800/80 scroll-mt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div class="tech-tag inline-block">Realidade dos Escritórios</div>
+          <div class="tech-tag inline-block">Fluxo em 4 Passos</div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Você reconhece estes gargalos no fechamento mensal?
+            Como o NotaSync baixa os XMLs para o seu escritório
           </h2>
           <p class="text-slate-400 text-sm leading-relaxed">
-            A rotina contábil já é exigente por natureza. O que drena o tempo da sua equipe não são as análises tributárias, mas sim as tarefas repetitivas manuais.
+            Sem processos manuais demorados. Configuramos o certificado uma única vez e o sistema faz o trabalho pesado de madrugada.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+            <span class="text-2xl font-black text-cyan-400 font-mono">01</span>
+            <h3 class="text-base font-bold text-white">Certificado do contador</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Você envia o certificado A1 do contador. Ele é guardado com criptografia forte no nosso cofre digital seguro.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+            <span class="text-2xl font-black text-cyan-400 font-mono">02</span>
+            <h3 class="text-base font-bold text-white">Importa a lista de CNPJs</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Você cadastra ou sobe uma planilha com os CNPJs das empresas atendidas pelo escritório em Santa Catarina.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+            <span class="text-2xl font-black text-cyan-400 font-mono">03</span>
+            <h3 class="text-base font-bold text-white">Busca diária de madrugada</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Todo dia às 02:00 o NotaSync consulta a SEF/SC e baixa automaticamente todas as notas emitidas e canceladas.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+            <span class="text-2xl font-black text-emerald-400 font-mono">04</span>
+            <h3 class="text-base font-bold text-white">Baixa o ZIP do mês</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Você consulta, filtra e baixa o pacote ZIP com todos os XMLs organizados para importar no seu sistema contábil.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="como-funciona.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-xs font-bold uppercase tracking-wider">
+            Conhecer Metodologia Completa e FAQ do NotaSync <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SEÇÃO: AS DORES DO ESCRITÓRIO FISCAL
+         ============================================================== -->
+    <section class="py-20 bg-[#070b14] border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div class="tech-tag inline-block">Realidade Fiscal</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Você reconhece estes gargalos no fechamento fiscal?
+          </h2>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Coletar notas fiscais consome um tempo precioso do setor fiscal que deveria estar focado em apuração e consultoria tributária.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <!-- Dor 1: Planilhas soltas -->
+          <!-- Dor 1: Baixar empresa por empresa -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400">
-              <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+              <i data-lucide="download" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">Planilhas soltas e sem padrão</h3>
+            <h3 class="text-lg font-bold text-white">Baixar NFC-e empresa por empresa</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Cada cliente envia extratos e despesas em formatos diferentes. O analista perde horas padronizando colunas, corrigindo datas e eliminando duplicidades antes de sequer começar a escrituração.
+              Ter que entrar no portal ou cobrar cliente por cliente todo fim de mês consome dias inteiros da sua equipe e atrasa o fechamento fiscal.
             </p>
           </div>
 
-          <!-- Dor 2: Conciliação manual -->
+          <!-- Dor 2: Pagar por serviço terceirizado -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
-              <i data-lucide="git-compare" class="w-5 h-5"></i>
+              <i data-lucide="credit-card" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">Conciliação manual linha por linha</h3>
+            <h3 class="text-lg font-bold text-white">Pagar por um serviço só para isso</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Conferir centenas de pagamentos e recebimentos batendo extrato bancário contra balancete ou relatórios financeiros consome dias inteiros que poderiam ser dedicados a consultoria e atendimento.
+              Mensalidades caras de plataformas intermediárias que apenas consultam o webservice da SEF/SC que o contador já tem direito de acessar.
             </p>
           </div>
 
-          <!-- Dor 3: Retrabalho de importação no ERP -->
+          <!-- Dor 3: Nota que falta no fechamento -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
               <i data-lucide="alert-triangle" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">Retrabalho para importar no SCI Único</h3>
+            <h3 class="text-lg font-bold text-white">Nota fiscal faltando no fechamento</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Arquivos que não fecham com o layout oficial do sistema contábil resultam em erros na importação, históricos cortados e necessidade de redigitação manual de partidas dobradas.
+              Notas omitidas ou esquecidas pelo cliente no final da competência geram retrabalho na apuração de impostos e risco de autuação.
             </p>
           </div>
 
-          <!-- Dor 4: Vencimentos de certidões e alvarás -->
+          <!-- Dor 4: Cancelamento que ninguém viu -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-              <i data-lucide="clock" class="w-5 h-5"></i>
+              <i data-lucide="x-circle" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">Vencimento de certidões e alvarás</h3>
+            <h3 class="text-lg font-bold text-white">Cancelamento que ninguém viu</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Controlar prazos de alvarás de funcionamento na Prefeitura de Tubarão, certidões negativas e certificados digitais em anotações soltas gera risco de multas e dores de cabeça com clientes.
+              Notas canceladas pelo emitente que continuam constando na escrituração porque o cliente não avisou o setor fiscal do escritório.
             </p>
           </div>
 
-          <!-- Dor 5: A Reforma Tributária chegando -->
+          <!-- Dor 5: Certificado vencido sem aviso -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
-              <i data-lucide="landmark" class="w-5 h-5"></i>
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">A Reforma Tributária no radar</h3>
+            <h3 class="text-lg font-bold text-white">Certificado vencido sem aviso prévio</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              A transição para o IBS/CBS e as regras de ISS municipal exigirão ferramentas ágeis para conferência em lote. O escritório que automatizar processos hoje estará preparado para a nova rotina.
+              Descobrir que o certificado A1 expirou bem no dia da entrega de obrigações trava toda a rotina fiscal e o envio de declarações.
             </p>
           </div>
 
-          <!-- Dor 6: Suporte distante via 0800 -->
+          <!-- Dor 6: Suporte burocrático e impessoal -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 space-y-3">
             <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
               <i data-lucide="headphones" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white">Suporte burocrático e impessoal</h3>
+            <h3 class="text-lg font-bold text-white">Suporte distante via 0800</h3>
             <p class="text-slate-400 text-xs leading-relaxed">
-              Quando você precisa de uma adaptação no formato de um extrato ou de uma regra contábil, aguardar dias pela fila de chamados de uma grande empresa paralisa o fechamento da competência.
+              Quando surge uma dúvida sobre o webservice da SEF/SC, esperar horas em filas de atendimento de grandes operadoras atrasa seu trabalho.
             </p>
           </div>
 
@@ -486,91 +458,149 @@
     </section>
 
     <!-- ==============================================================
-         SEÇÃO: MÓDULOS E SOLUÇÕES (COM TRANSPARÊNCIA)
+         SEÇÃO: SEGURANÇA DO CERTIFICADO (RESUMO DIRETO)
          ============================================================== -->
-    <section class="py-20 relative">
+    <section class="py-16 bg-slate-950/80 border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-12 border-cyan-500/30 relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="tech-tag inline-block">Privacidade & Proteção de Dados</div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Como tratamos o certificado digital do seu escritório
+              </h2>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Sabemos da responsabilidade com o certificado A1 do contador. Construímos uma arquitetura de proteção rigorosa:
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+                <div class="flex items-start gap-2">
+                  <i data-lucide="lock" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Criptografia forte:</strong> Armazenamento seguro de chaves com algoritmos de alta segurança.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i data-lucide="eye-off" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Senha protegida:</strong> A senha nunca é exibida em telas ou salva em logs.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Uso estrito e exclusivo:</strong> Acionado unicamente para baixar documentos fiscais na SEF/SC.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i data-lucide="history" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Registro de cada uso:</strong> Rastreabilidade e log de cada consulta feita ao webservice.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i data-lucide="trash-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Apagamento imediato:</strong> Se você cancelar, o certificado e as credenciais são destruídos.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                  <span><strong>Termo formal de aceite:</strong> Segurança jurídica e conformidade com a LGPD.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 text-center lg:text-right">
+              <a href="seguranca.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold text-white bg-slate-900 border border-cyan-500/40 hover:border-cyan-400 hover:bg-slate-800 transition-all uppercase tracking-wider">
+                Ver Detalhes em Segurança & LGPD <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SEÇÃO: ROADMAP HONESTO DA CENTRAL CONTÁBIL
+         ============================================================== -->
+    <section class="py-20 relative bg-[#070B14] border-t border-slate-800/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <div class="tech-tag inline-block mb-3">Módulos da Plataforma</div>
+            <div class="tech-tag inline-block mb-3">Roadmap da Plataforma</div>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              O que fazemos pelo seu escritório
+              Central Contábil: Módulos & Status Reais
             </h2>
             <p class="text-slate-400 text-sm max-w-2xl mt-1">
-              Transparência em primeiro lugar: veja exatamente o que já está <strong>pronto para implantação imediata</strong> e o que desenvolvemos sob medida.
+              Transparência em primeiro lugar: veja exatamente o que já está em <strong>programa piloto</strong>, o que está em desenvolvimento e o que fazemos sob medida.
             </p>
           </div>
           <a href="modulos.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-xs font-bold uppercase tracking-wider">
-            Ver Detalhes dos Módulos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            Ver Todos os Módulos <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <!-- Módulo 1: Conciliação Bancária (PRONTO) -->
-          <div class="glass-card rounded-2xl p-6 border-slate-800 flex flex-col justify-between">
+          <!-- Módulo 1: NotaSync NFC-e (PILOTO) -->
+          <div class="glass-card rounded-2xl p-6 border-cyan-500/40 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                  <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                  <i data-lucide="cloud-download" class="w-5 h-5"></i>
                 </span>
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 px-2.5 py-1 rounded-full">
-                  Pronto para Uso
+                <span class="text-[10px] font-bold uppercase tracking-wider bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 px-2.5 py-1 rounded-full">
+                  Programa Piloto — Vagas Limitadas
                 </span>
               </div>
-              <h3 class="text-lg font-bold text-white">Conciliação Bancária & Importação</h3>
+              <h3 class="text-lg font-bold text-white">NotaSync — NFC-e (Mod. 65)</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Importe extratos em OFX, PDF, CSV ou TXT Sicoob de 9+ bancos. O motor cruza lançamentos, sugere contas de débito/crédito por CNPJ e memoriza fornecedores recorrentes.
+                Download automático diário dos XMLs de NFC-e dos clientes de Santa Catarina direto da SEF/SC, usando o certificado A1 do contador.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Sicoob, Sicredi, BB, Caixa, etc.</span>
-              <a href="modulos.html#conciliacao" class="text-cyan-400 hover:underline font-semibold">Detalhes</a>
+              <span class="text-emerald-400 font-semibold">Exclusivo SEF/SC</span>
+              <a href="#piloto" class="text-cyan-400 hover:underline font-semibold">Entrar no Piloto</a>
             </div>
           </div>
 
-          <!-- Módulo 2: Integração SCI Único (PRONTO) -->
+          <!-- Módulo 2: NF-e e CT-e (EM DESENVOLVIMENTO) -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
-                <span class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                  <i data-lucide="database" class="w-5 h-5"></i>
+                <span class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                  <i data-lucide="file-text" class="w-5 h-5"></i>
                 </span>
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-950/80 text-emerald-400 border border-emerald-500/40 px-2.5 py-1 rounded-full">
-                  Pronto para Uso
+                <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-950/80 text-blue-300 border border-blue-500/40 px-2.5 py-1 rounded-full">
+                  Em Desenvolvimento
                 </span>
               </div>
-              <h3 class="text-lg font-bold text-white">Integração Oficial com o SCI Único</h3>
+              <h3 class="text-lg font-bold text-white">NF-e (Mod. 55) & CT-e (Mod. 57)</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Geração automática do arquivo oficial <code class="text-cyan-300 font-mono text-[11px]">UNICO_&lt;Unidade&gt;.txt</code> formatado em UTF-8 com BOM e relatório de pendências CSV para conferência instantânea.
+                Expansão da captura direta para notas fiscais de mercadorias e conhecimentos de transporte, unificando a esteira fiscal.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Layout 16 colunas oficial</span>
-              <a href="modulos.html#sci-unico" class="text-cyan-400 hover:underline font-semibold">Detalhes</a>
+              <span>Próxima etapa</span>
+              <a href="modulos.html" class="text-blue-400 hover:underline font-semibold">Detalhes</a>
             </div>
           </div>
 
-          <!-- Módulo 3: Vencimentos de Alvarás & Certidões (EM BREVE) -->
+          <!-- Módulo 3: Vencimentos & Certidões (EM BREVE) -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
                 <span class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
-                  <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                  <i data-lucide="calendar" class="w-5 h-5"></i>
                 </span>
                 <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-950/80 text-amber-300 border border-amber-500/40 px-2.5 py-1 rounded-full">
-                  Em Breve • Piloto
+                  Em Breve
                 </span>
               </div>
               <h3 class="text-lg font-bold text-white">Controle de Vencimentos & Certidões</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Painel centralizado para controlar datas de renovação de alvarás de bombeiros e sanitários (especialmente Tubarão), CNDs (Federal, Estadual, Municipal) e expiração de certificados digitais A1/A3.
+                Painel centralizado para controlar datas de renovação de alvarás, CNDs e validade de certificados digitais A1/A3 dos clientes.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Alertas prévios por e-mail/whats</span>
-              <a href="modulos.html#vencimentos" class="text-amber-400 hover:underline font-semibold">Detalhes</a>
+              <span>Alertas preventivos</span>
+              <a href="modulos.html" class="text-amber-400 hover:underline font-semibold">Detalhes</a>
             </div>
           </div>
 
@@ -587,38 +617,38 @@
               </div>
               <h3 class="text-lg font-bold text-white">Controle de Entregas por Setor</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Quadro visual com as obrigações acessórias mensais divididas por setor (Fiscal, Contábil, Departamento Pessoal) e responsável. Saiba na hora o que já foi entregue e o que está pendente.
+                Acompanhamento visual de obrigações acessórias mensais divididas por setor (Fiscal, Contábil, Pessoal) e responsável.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Visão por competência</span>
-              <a href="modulos.html#entregas" class="text-amber-400 hover:underline font-semibold">Detalhes</a>
+              <span>Gestão operacional</span>
+              <a href="modulos.html" class="text-amber-400 hover:underline font-semibold">Detalhes</a>
             </div>
           </div>
 
-          <!-- Módulo 5: Ferramentas Fiscais / Reforma Tributária (SOB MEDIDA) -->
+          <!-- Módulo 5: Auditoria Fiscal & IBS/CBS (EM BREVE) -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
-                <span class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                <span class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
                   <i data-lucide="calculator" class="w-5 h-5"></i>
                 </span>
-                <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-950/80 text-blue-300 border border-blue-500/40 px-2.5 py-1 rounded-full">
-                  Sob Medida
+                <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-950/80 text-purple-300 border border-purple-500/40 px-2.5 py-1 rounded-full">
+                  Em Breve
                 </span>
               </div>
-              <h3 class="text-lg font-bold text-white">Ferramentas Fiscais & Reforma Tributária</h3>
+              <h3 class="text-lg font-bold text-white">Auditor Fiscal & Reforma Tributária</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Automatizações específicas para cruzamento de notas fiscais de serviço (ISS Tubarão/SC) e scripts para conferência preliminar das regras de transição do IBS e CBS.
+                Cruzamentos inteligentes de XMLs de notas fiscais e ferramentas para preparação das regras de transição do IBS e CBS.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Customizado conforme demanda</span>
-              <a href="modulos.html#fiscal" class="text-blue-400 hover:underline font-semibold">Detalhes</a>
+              <span>Compliance tributário</span>
+              <a href="modulos.html" class="text-purple-400 hover:underline font-semibold">Detalhes</a>
             </div>
           </div>
 
-          <!-- Módulo 6: Sistemas Sob Medida para o seu Escritório -->
+          <!-- Módulo 6: Sistemas Sob Medida (SOB MEDIDA) -->
           <div class="glass-card rounded-2xl p-6 border-slate-800 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
@@ -626,16 +656,16 @@
                   <i data-lucide="cpu" class="w-5 h-5"></i>
                 </span>
                 <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-900 text-cyan-300 border border-cyan-500/30 px-2.5 py-1 rounded-full">
-                  Sob Demanda
+                  Sob Medida
                 </span>
               </div>
               <h3 class="text-lg font-bold text-white">Desenvolvimento Sob Medida</h3>
               <p class="text-slate-300 text-xs leading-relaxed">
-                Se o seu escritório tem uma planilha complexa em VBA que quebra com frequência ou um cliente que envia relatórios em formatos fora do padrão, construímos a solução exata para resolver isso.
+                Automações personalizadas para rotinas específicas do seu escritório, substituição de planilhas complexas e integrações internas.
               </p>
             </div>
             <div class="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
-              <span>Direto com o desenvolvedor</span>
+              <span>Atendimento direto</span>
               <a href="contato.html" class="text-cyan-400 hover:underline font-semibold">Conversar</a>
             </div>
           </div>
@@ -646,115 +676,177 @@
     </section>
 
     <!-- ==============================================================
-         COMO FUNCIONA (4 PASSOS DIRETOS)
+         SEÇÃO: VÍDEO CONHEÇA A CENTRAL CONTÁBIL (COM POSTER E PRELOAD NONE)
          ============================================================== -->
-    <section class="py-20 bg-slate-950/60 border-t border-slate-800/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="video-central" class="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-b from-[#070B14] via-[#091020] to-[#070B14] border-y border-cyan-500/30 scroll-mt-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
-        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div class="tech-tag inline-block">Processo Prático</div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Como funciona a implantação na prática?
+        <!-- Cabeçalho do Vídeo -->
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+          <span class="video-pulse-badge">
+            Plataforma MakerPixel
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+            Conheça a <span class="text-gradient-cyan">Central Contábil</span>
           </h2>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Nada de meses de enrolação. Em poucos dias o seu escritório já percebe a diferença no fechamento.
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Visão geral da plataforma; o vídeo demonstrativo do NotaSync estará disponível em breve.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
-            <span class="text-2xl font-black text-cyan-400 font-mono">01</span>
-            <h3 class="text-base font-bold text-white">Conversa sobre a rotina</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Mapeamos os bancos mais usados pelos seus clientes e quais empresas consom mais tempo na conciliação manual.
-            </p>
+        <!-- Player de Vídeo em Moldura Cyber High-Tech -->
+        <div class="max-w-4xl mx-auto">
+          <div class="video-glow-frame">
+            <!-- Barra Superior do Player Estilo Terminal / macOS -->
+            <div class="code-window-bar px-4 py-3 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                <span class="text-slate-300 font-mono text-[11px] ml-2 hidden sm:inline">
+                  Central Contábil • Demonstração da Plataforma
+                </span>
+              </div>
+              <div class="flex items-center gap-3 font-mono text-[11px]">
+                <span class="text-slate-400">1080p Full HD</span>
+                <span class="text-slate-500">•</span>
+                <span class="text-slate-400">02:05 min</span>
+              </div>
+            </div>
+
+            <!-- Vídeo HTML5 com poster e preload none -->
+            <div class="relative bg-black aspect-video flex items-center justify-center">
+              <video 
+                id="main-showcase-video"
+                controls 
+                preload="none"
+                poster="assets/img/central-contabil-poster.svg"
+                playsinline
+                class="w-full h-full object-contain bg-slate-950"
+                title="Conheça a Central Contábil - MakerPixel Techsystem">
+                <source src="assets/video/apresentacao-comercial-central-contabil.mp4" type="video/mp4">
+                Seu navegador não suporta reprodução de vídeos HTML5.
+              </video>
+            </div>
+
+            <!-- Rodapé da Moldura com Destaques -->
+            <div class="p-4 sm:p-5 bg-slate-950/95 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+              <p class="text-slate-400 text-center sm:text-left">
+                Demonstração de arquitetura da plataforma. Tem interesse no <strong>NotaSync</strong>? Participe do programa piloto.
+              </p>
+              <a href="#piloto" class="btn-gradient-primary px-5 py-2.5 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider flex-shrink-0">
+                Participar do Piloto
+              </a>
+            </div>
+
           </div>
-
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
-            <span class="text-2xl font-black text-cyan-400 font-mono">02</span>
-            <h3 class="text-base font-bold text-white">Parametrização ágil</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Configuramos as contas de débito/crédito, históricos padrão (HP) e os códigos de unidade do SCI Único.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
-            <span class="text-2xl font-black text-cyan-400 font-mono">03</span>
-            <h3 class="text-base font-bold text-white">Treinamento da equipe</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Demonstramos para seus analistas como importar os primeiros extratos com dados reais, em minutos.
-            </p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
-            <span class="text-2xl font-black text-emerald-400 font-mono">04</span>
-            <h3 class="text-base font-bold text-white">Suporte direto com o dev</h3>
-            <p class="text-slate-400 text-xs leading-relaxed">
-              Surgiram dúvidas ou um formato novo de extrato? O atendimento é direto com o Mauricio pelo WhatsApp, sem intermediários.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="text-center mt-10">
-          <a href="como-funciona.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-xs font-bold uppercase tracking-wider">
-            Conhecer Metodologia Completa e FAQ <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
         </div>
 
       </div>
     </section>
 
     <!-- ==============================================================
-         NÚMEROS DO PRODUTO (SEM DEPOIMENTOS FICTÍCIOS)
+         SEÇÃO: PERGUNTAS FREQUENTES (FAQ DO NOTASYNC)
          ============================================================== -->
-    <section class="py-16 bg-[#070b14] border-t border-slate-800/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <section class="py-20 bg-slate-950/60 border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="text-center space-y-3">
+          <div class="tech-tag inline-block">Dúvidas Frequentes</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Perguntas Frequentes sobre o NotaSync
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm">
+            Respostas claras e diretas sobre o funcionamento da captura de NFC-e na SEF/SC.
+          </p>
+        </div>
+
+        <div class="space-y-4">
           
-          <div class="space-y-1">
-            <p class="text-3xl sm:text-4xl font-black text-white font-heading">9+ Bancos</p>
-            <p class="text-xs text-slate-400 uppercase tracking-wider">Importação de OFX, PDF e CSV</p>
-          </div>
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer" open>
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Funciona para outros estados além de Santa Catarina?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Por enquanto exclusivamente para empresas de <strong>Santa Catarina</strong>. O NotaSync foi desenvolvido utilizando o serviço oficial da Secretaria de Estado da Fazenda (SEF/SC).
+            </div>
+          </details>
 
-          <div class="space-y-1">
-            <p class="text-3xl sm:text-4xl font-black text-cyan-400 font-heading">100%</p>
-            <p class="text-xs text-slate-400 uppercase tracking-wider">Compatível com SCI Único</p>
-          </div>
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Preciso do certificado digital de cada empresa atendida?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Para as NFC-e (modelo 65), <strong>não</strong>. O certificado digital A1 do próprio contador é suficiente para baixar as notas de todas as empresas clientes, desde que o contabilista esteja devidamente vinculado ao CNPJ da empresa no SAT da SEF/SC.
+            </div>
+          </details>
 
-          <div class="space-y-1">
-            <p class="text-3xl sm:text-4xl font-black text-emerald-400 font-heading">0 Minutos</p>
-            <p class="text-xs text-slate-400 uppercase tracking-wider">Na fila de espera de 0800</p>
-          </div>
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>E se o contador não estiver vinculado no SAT de alguma empresa?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              O painel do NotaSync identifica automaticamente a rejeição e exibe o alerta: <em>"Contador sem vínculo no SAT"</em>. Assim você sabe com precisão cirúrgica qual empresa precisa regularizar o vínculo de contabilista no portal da SEF.
+            </div>
+          </details>
 
-          <div class="space-y-1">
-            <p class="text-3xl sm:text-4xl font-black text-white font-heading">100% Local</p>
-            <p class="text-xs text-slate-400 uppercase tracking-wider">Tubarão e Sul Catarinense</p>
-          </div>
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Funciona com certificado A3 em token ou cartão?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Não na nuvem. Como o NotaSync é um serviço em nuvem que executa buscas automáticas de madrugada sem ninguém precisar digitar PIN na máquina, é necessário o certificado digital do tipo <strong>A1 (arquivo .pfx ou .p12)</strong>.
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Funciona com o meu sistema contábil atual?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Sim, com qualquer um. O NotaSync entrega os arquivos XML oficiais no formato padrão nacional, organizados em pacotes ZIP por mês e empresa. Você importa no seu sistema contábil exatamente da forma que já faz hoje.
+            </div>
+          </details>
+
+          <details class="glass-card rounded-2xl p-6 border-slate-800 group cursor-pointer">
+            <summary class="font-bold text-white text-base flex items-center justify-between list-none">
+              <span>Quanto tempo os XMLs ficam guardados na plataforma?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4 pt-4 border-t border-slate-800">
+              Os arquivos XML e os pacotes de download permanecem armazenados com segurança por <strong>13 meses</strong>, garantindo que você tenha o histórico completo da competência anual e backups à mão.
+            </div>
+          </details>
 
         </div>
+
       </div>
     </section>
 
     <!-- ==============================================================
-         FORMULÁRIO DE CONTATO & DIAGNÓSTICO CONTÁBIL
+         FORMULÁRIO DO PROGRAMA PILOTO NOTASYNC
          ============================================================== -->
-    <section id="diagnostico" class="py-20 relative bg-radial-glow-cyan border-t border-slate-800/80">
+    <section id="piloto" class="py-20 relative bg-radial-glow-cyan border-t border-slate-800/80 scroll-mt-24">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center mb-10 space-y-3">
-          <div class="tech-tag inline-block">Agendamento & Avaliação</div>
+          <div class="tech-tag inline-block">Programa Piloto • Vagas Limitadas</div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Agende uma demonstração prática com a sua equipe
+            Quero participar do piloto do NotaSync
           </h2>
           <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto">
-            Preencha os dados abaixo. Nós analisamos a sua rotina e mostramos exatamente como a ferramenta processa os extratos que mais tomam tempo do seu escritório hoje.
+            Preencha os dados abaixo. Nós alinhamos com você a configuração inicial e colocamos o robô para rodar na próxima madrugada para os seus clientes de Santa Catarina.
           </p>
         </div>
 
         <div class="glass-card rounded-3xl p-6 sm:p-10 border-cyan-500/30 shadow-2xl">
-          <form id="accounting-diagnosis-form" class="space-y-5">
+          <form id="pilot-form" class="space-y-5">
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-semibold text-slate-300 mb-1.5">Seu Nome *</label>
@@ -766,17 +858,20 @@
               </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Cidade / Estado *</label>
-                <input type="text" id="diag-city" required placeholder="Ex: Tubarão - SC" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Cidade / UF (Santa Catarina) *</label>
+                <input type="text" id="diag-city" required placeholder="Ex: Florianópolis - SC" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-300 mb-1.5">Telefone / WhatsApp *</label>
-                <input type="text" id="diag-phone" required placeholder="(48) 99999-9999" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                <input type="text" id="diag-phone" required placeholder="(DDD) 99999-9999" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
               </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Empresas Atendidas</label>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Quantidade de empresas atendidas</label>
                 <select id="diag-companies" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
                   <option value="Até 30 empresas">Até 30 empresas</option>
                   <option value="30 a 80 empresas" selected>30 a 80 empresas</option>
@@ -784,29 +879,34 @@
                   <option value="Mais de 200 empresas">Mais de 200 empresas</option>
                 </select>
               </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Sistema contábil que usa (texto livre)</label>
+                <input type="text" id="diag-erp" placeholder="Ex: Digite o nome do seu software contábil..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+              </div>
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Sistema Contábil Principal Utilizado</label>
-              <select id="diag-erp" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
-                <option value="SCI Único" selected>SCI Único (Foco prioritário)</option>
-                <option value="Domínio Sistemas (Thomson Reuters)">Domínio Sistemas</option>
-                <option value="Questor">Questor</option>
-                <option value="Outro Sistema">Outro Sistema</option>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Como você baixa as NFC-e dos clientes hoje? *</label>
+              <select id="diag-how-download" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400">
+                <option value="Download manual empresa por empresa">Download manual empresa por empresa</option>
+                <option value="Serviço pago terceirizado">Serviço pago terceirizado</option>
+                <option value="Não baixo / espero o cliente enviar">Não baixo / espero o cliente enviar</option>
+                <option value="Outro">Outro (especificar abaixo)</option>
               </select>
+              <input type="text" id="diag-how-download-other" placeholder="Se marcou 'Outro', detalhe aqui..." class="hidden mt-2 w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Qual é a maior dor ou gargalo do escritório hoje? *</label>
-              <textarea id="diag-pain" required rows="3" placeholder="Ex: Perco muito tempo digitando extratos bancários em PDF de clientes que não enviam OFX..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"></textarea>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5">Qual é a maior dor com documentos fiscais hoje? *</label>
+              <textarea id="diag-pain" required rows="3" placeholder="Ex: Clientes não enviam os XMLs no prazo, ou gastamos muito com plataformas caras de captura..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"></textarea>
             </div>
 
             <button type="submit" class="w-full btn-gradient-primary py-4 rounded-xl text-sm font-extrabold text-slate-950 uppercase tracking-wider flex items-center justify-center gap-2">
               <i data-lucide="send" class="w-4 h-4"></i>
-              Enviar e Falar com Mauricio no WhatsApp
+              Quero Participar do Piloto e Falar no WhatsApp
             </button>
             <p class="text-[11px] text-slate-500 text-center">
-              Seus dados são protegidos conforme a LGPD e usados exclusivamente para responder ao seu contato técnico.
+              Seus dados são protegidos conforme a LGPD e usados exclusivamente para contato técnico direto.
             </p>
           </form>
         </div>
@@ -839,15 +939,15 @@
           </div>
           <div>
             <span class="font-bold text-white text-sm">MakerPixel Techsystem Contábil</span>
-            <span class="block text-[11px] text-slate-500">Tecnologia especializada para escritórios de contabilidade</span>
+            <span class="block text-[11px] text-slate-500">NotaSync & Central Contábil • Santa Catarina</span>
           </div>
         </div>
 
-        <!-- Links Multi-Páginas -->
+        <!-- Links Multi-Páginas Padronizados -->
         <div class="flex flex-wrap items-center justify-center gap-5 text-slate-300">
           <a href="index.html" class="hover:text-cyan-400">Início</a>
-          <a href="modulos.html" class="hover:text-cyan-400">Módulos</a>
-          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona</a>
+          <a href="modulos.html" class="hover:text-cyan-400">Módulos & Soluções</a>
+          <a href="como-funciona.html" class="hover:text-cyan-400">Como Funciona & FAQ</a>
           <a href="seguranca.html" class="hover:text-cyan-400">Segurança & LGPD</a>
           <a href="sobre.html" class="hover:text-cyan-400">Sobre Nós</a>
           <a href="contato.html" class="hover:text-cyan-400">Contato</a>
@@ -870,9 +970,9 @@
       </div>
 
       <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px] gap-3">
-        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Tubarão - SC.</p>
+        <p>© 2026 MakerPixel Techsystem. Desenvolvido por Mauricio Goulart de Oliveira. Santa Catarina.</p>
         <p class="flex items-center gap-1 text-slate-400">
-          Solução complementar aos ERPs contábeis • Foco em produtividade
+          NotaSync: XML das NFC-e direto da SEF/SC para escritórios de contabilidade
         </p>
       </div>
 
@@ -880,7 +980,7 @@
   </footer>
 
   <!-- ==============================================================
-       WIDGET FLUTUANTE DO WHATSAPP (FOCO CONTÁBIL)
+       WIDGET FLUTUANTE DO WHATSAPP (FOCO NOTASYNC)
        ============================================================== -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
     
@@ -902,7 +1002,7 @@
             </h4>
             <p class="text-[11px] text-emerald-400 flex items-center gap-1">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              Atendimento direto • Tubarão/SC
+              Atendimento direto • Santa Catarina
             </p>
           </div>
         </div>
@@ -914,22 +1014,22 @@
       <!-- Corpo da Janela de Chat -->
       <div class="p-4 bg-slate-950/90 space-y-3 max-h-[420px] overflow-y-auto">
         <div class="bg-slate-900 rounded-2xl rounded-tl-sm p-3.5 border border-slate-800 text-xs text-slate-200 leading-relaxed shadow-sm">
-          👋 Olá! Sou o <strong>Mauricio</strong>. Desenvolvo ferramentas para facilitar a conciliação e a rotina do seu escritório contábil. Como posso ajudar?
+          👋 Olá! Sou o <strong>Mauricio</strong>. Desenvolvo o <strong>NotaSync</strong> para automatizar a captura de NFC-e na SEF/SC. Como posso ajudar seu escritório?
           <span class="block text-[10px] text-slate-500 mt-1 text-right">Agora</span>
         </div>
 
-        <!-- Pílulas Contábeis -->
+        <!-- Pílulas Rápidas Conforme Regra -->
         <div class="space-y-1.5 pt-1">
           <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Assunto Rápido:</span>
           <div class="flex flex-wrap gap-1.5">
-            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Gostaria de ver uma demonstração prática da conciliação bancária para o SCI Único.">
-              📊 Conciliação SCI Único
+            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Gostaria de saber como funciona o NotaSync para baixar as NFC-e dos meus clientes em SC.">
+              ⚡ NotaSync / NFC-e
             </button>
-            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Tenho clientes que mandam extratos despadronizados. Como seu sistema resolve?">
-              📑 Importação de Extratos
+            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Tenho interesse em participar do programa piloto com vagas limitadas.">
+              🚀 Programa Piloto
             </button>
-            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Nosso escritório tem uma rotina específica. Vocês fazem módulos sob medida?">
-              ⚙️ Módulo Sob Medida
+            <button class="wa-preset-pill text-[11px] px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-400 text-slate-300 transition-colors" data-text="Olá Mauricio! Nosso escritório tem uma demanda específica de automação fiscal/contábil sob medida.">
+              ⚙️ Sob Medida
             </button>
           </div>
         </div>
