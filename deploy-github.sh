@@ -23,7 +23,7 @@ if [ $? -eq 0 ]; then
     echo "1. Acesse: https://github.com/Mauricio-G-Oliveira/makerpixelsite/settings/pages"
     echo "2. Em 'Branch', selecione 'main' e a pasta '/(root)'"
     echo "3. Clique em 'Save'"
-    echo "4. O site estará disponível em: https://mauricio-g-oliveira.github.io/makerpixelsite/"
+    echo "4. O site estará disponível em: https://www.makerpixeltech.com.br/"
 else
     echo ""
     echo "⚠️ Se o envio falhou:"

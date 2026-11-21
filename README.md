@@ -8,10 +8,10 @@ Fundada e desenvolvida por **Mauricio Goulart de Oliveira**.
 
 ---
 
-## 🌐 Site Online no GitHub Pages
+## 🌐 Site Online
 
 O site está publicado e ativo em produção:
-👉 **[https://mauricio-g-oliveira.github.io/makerpixelsite/](https://mauricio-g-oliveira.github.io/makerpixelsite/)**
+👉 **[https://www.makerpixeltech.com.br](https://www.makerpixeltech.com.br)**
 
 ---
 
@@ -59,7 +59,7 @@ Seguindo a visão integrada de engenharia de software:
 
 1. **📊 [Central Contábil by MakerPixel](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)** *(Carro-Chefe Contábil)*
    - **Foco:** Plataforma de produtividade e gestão fiscal-contábil, automação de rotinas e integração de documentos fiscais.
-   - **Links:** [Website Oficial](https://mauricio-g-oliveira.github.io/makerpixelsite/) • [Repositório](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)
+   - **Links:** [Website Oficial](https://www.makerpixeltech.com.br/) • [Repositório](https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil)
 
 2. **🏦 [Fintech Core Ledger & Instant Payment Engine](https://github.com/Mauricio-G-Oliveira/fintech-core-ledger)**
    - **Foco:** Motor transacional bancário de liquidação instantânea por partidas dobradas, concorrência livre de deadlocks (`SELECT FOR UPDATE` determinístico) e garantia de idempotência (UUIDv7).
