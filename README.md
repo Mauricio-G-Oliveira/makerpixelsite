@@ -74,7 +74,7 @@ Seguindo a visão integrada de engenharia de software:
 ## 📞 Canais Oficiais de Contato
 
 - **WhatsApp Direto**: [(48) 98457-0272](https://wa.me/5548984570272) *(Atendimento direto com o desenvolvedor, sem intermediários)*
-- **E-mail**: [mauriciogoulart.deoliveira37@gmail.com](mailto:mauriciogoulart.deoliveira37@gmail.com)
+- **E-mail**: [contato@makerpixeltech.com.br](mailto:contato@makerpixeltech.com.br)
 - **Base Operacional**: Santa Catarina • Atendimento para todo o Brasil
 
 ---

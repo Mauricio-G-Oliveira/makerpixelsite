@@ -1,7 +1,7 @@
 /**
  * MakerPixel Techsystem - Script Interativo Multi-Páginas (Foco Contábil / NotaSync)
  * WhatsApp: 48984570272
- * Email: mauriciogoulart.deoliveira37@gmail.com
+ * Email: contato@makerpixeltech.com.br
  * Especialista em Tecnologia para Escritórios de Contabilidade (Santa Catarina)
  */
 
