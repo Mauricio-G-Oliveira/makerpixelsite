@@ -22,7 +22,7 @@ O **NotaSync** resolve um dos gargalos diários mais desgastantes do setor fisca
 - **Modelo 65 (NFC-e)**: Baixa os XMLs autorizados e eventos de cancelamento de todas as empresas do escritório.
 - **Usa o certificado digital A1 do próprio contador**: Desde que vinculado no SAT da SEF/SC, dispensa coletar certificados de clientes do Simples Nacional ou MEIs.
 - **Sem intermediários caros**: Elimina plataformas pagas por CNPJ consultado e rotinas manuais de download no portal estadual.
-- **Status atual**: *Programa Piloto com vagas limitadas para acompanhamento técnico próximo.*
+- **Status atual**: *Inscrições abertas para o programa piloto (início previsto: 1º trimestre de 2027).*
 
 ---
 
@@ -30,11 +30,12 @@ O **NotaSync** resolve um dos gargalos diários mais desgastantes do setor fisca
 
 Estrutura corporativa multi-páginas com navegação fluida e padronizada:
 
-- **[`index.html`](index.html)**: Apresentação do NotaSync, vídeo da Central Contábil, painel mock de monitoramento SEF/SC, roadmap transparente e formulário de inscrição no piloto.
+- **[`index.html`](index.html)**: Apresentação do NotaSync, vídeo da Central Contábil, painel mock de monitoramento SEF/SC, novos planos da Central Contábil, roadmap transparente e formulário de inscrição no piloto.
 - **[`modulos.html`](modulos.html)**: Detalhamento de cada frente de produto com status honesto (Piloto, Em desenvolvimento, Em breve, Sob medida).
 - **[`como-funciona.html`](como-funciona.html)**: Passo a passo da captura noturna na SEF/SC, vídeo demonstrativo da Central Contábil e FAQ técnico detalhado.
 - **[`seguranca.html`](seguranca.html)**: Arquitetura de proteção do certificado A1 (criptografia em repouso com chave assimétrica, sem armazenamento de senha em texto puro, escopo restrito à SEF/SC, trilha de auditoria e conformidade estrita com a LGPD).
-- **[`sobre.html`](sobre.html)**: Trajetória profissional de Mauricio Goulart como desenvolvedor de software focado no mercado contábil catarinense, filosofia técnica e contato direto.
+- **[`privacidade.html`](privacidade.html)**: Política de Privacidade e Proteção de Dados (LGPD) transparente e acessível.
+- **[`sobre.html`](sobre.html)**: Trajetória profissional de Mauricio Goulart como desenvolvedor de software focado no mercado contábil catarinense, filosofia técnica, portfólio de software e contato direto.
 - **[`contato.html`](contato.html)**: Inscrição detalhada no piloto do NotaSync e canal direto de WhatsApp.
 - **[`outros-projetos.html`](outros-projetos.html)**: Projetos paralelos e portfólio de engenharia de software.
 
@@ -44,7 +45,7 @@ Estrutura corporativa multi-páginas com navegação fluida e padronizada:
 
 | Módulo | Escopo | Status Real |
 | :--- | :--- | :--- |
-| **NotaSync (NFC-e mod. 65)** | Download automático noturno na SEF/SC via certificado do contador | **Programa Piloto (Vagas Limitadas)** |
+| **NotaSync (NFC-e mod. 65)** | Download automático noturno na SEF/SC via certificado do contador | **Programa piloto (Inscrições abertas)** |
 | **NF-e e CT-e (mod. 55 e 57)** | Captura nacional via webservices SEFAZ | **Em Desenvolvimento** |
 | **Controle de Vencimentos** | Alvarás, certidões negativas (CNDs) e certificados digitais | **Em Breve** |
 | **Controle de Entregas por Setor** | Checklist operacional por setor (Fiscal, Contábil, Pessoal) | **Em Breve** |

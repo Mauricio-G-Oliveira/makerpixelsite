@@ -18,6 +18,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   /* -------------------------------------------------------------
+     1.1 Configuração Central do Programa Piloto & Planos
+     (Altere datas e limites aqui facilmente)
+     ------------------------------------------------------------- */
+  window.PILOTO_CONFIG = {
+    status: 'Inscrições abertas para o programa piloto',
+    previsaoInicio: '1º trimestre de 2027',
+    badgeTexto: 'Inscrições abertas para o programa piloto • Início previsto: 1º trimestre de 2027'
+  };
+
+  window.PLANOS_CENTRAL_CONTABIL = {
+    essencial: {
+      nome: 'Essencial',
+      descricao: 'Para contadores autônomos e pequenos escritórios que buscam segurança inicial.',
+      usuarios: 'Até 2 usuários',
+      empresas: 'Até 30 empresas atendidas',
+      armazenamento: 'Histórico de 13 meses',
+      modulos: 'Todos os módulos da Central Contábil inclusos',
+      preco: 'Definido no fim do piloto'
+    },
+    escritorio: {
+      nome: 'Escritório',
+      destaque: true,
+      descricao: 'A melhor escolha para escritórios contábeis em crescimento na rotina fiscal.',
+      usuarios: 'Até 5 usuários',
+      empresas: 'Até 80 empresas atendidas',
+      armazenamento: 'Histórico de 13 meses',
+      modulos: 'Todos os módulos da Central Contábil inclusos',
+      preco: 'Definido no fim do piloto'
+    },
+    escritorioPlus: {
+      nome: 'Escritório+',
+      descricao: 'Para bancas contábeis de médio e grande porte com alto volume diário de NFC-e.',
+      usuarios: 'Usuários ilimitados',
+      empresas: 'Mais de 80 empresas atendidas',
+      armazenamento: 'Histórico estendido personalizável',
+      modulos: 'Todos os módulos da Central Contábil inclusos',
+      preco: 'Sob consulta'
+    }
+  };
+
+  /* -------------------------------------------------------------
      2. Menu Mobile Responsivo
      ------------------------------------------------------------- */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -149,6 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ? `Outro (${howDownloadOther})` 
         : (howDownload || 'Não especificado');
 
+      const privacyCheck = document.getElementById('diag-privacy');
+      if (privacyCheck && !privacyCheck.checked) {
+        alert('Por favor, confirme que leu e concorda com a Política de Privacidade.');
+        privacyCheck.focus();
+        return;
+      }
+
       let text = `*INSCRIÇÃO NO PROGRAMA PILOTO - NOTASYNC (SEF/SC)*\n`;
       text += `━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
       text += `👤 *Responsável:* ${name}\n`;
@@ -170,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     6. Destaque de Navegação Ativa
+     6. Destaque de Navegação Ativa & Ano Dinâmico
      ------------------------------------------------------------- */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
@@ -181,5 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('text-cyan-400', 'font-bold');
       link.classList.remove('text-slate-300');
     }
+  });
+
+  const currentYear = new Date().getFullYear();
+  document.querySelectorAll('.footer-current-year').forEach(el => {
+    el.textContent = currentYear;
   });
 });
