@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     6. Destaque de Navegação Ativa & Ano Dinâmico
+     6. Destaque de Navegação Ativa, Ano Dinâmico & Dados Corporativos
      ------------------------------------------------------------- */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
@@ -231,8 +231,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Ano dinâmico
   const currentYear = new Date().getFullYear();
   document.querySelectorAll('.footer-current-year').forEach(el => {
     el.textContent = currentYear;
   });
+
+  // Aplicação dos dados corporativos centralizados (SITE_CONFIG)
+  if (window.SITE_CONFIG) {
+    if (window.SITE_CONFIG.razaoSocial) {
+      document.querySelectorAll('.footer-legal-razao').forEach(el => {
+        el.textContent = window.SITE_CONFIG.razaoSocial;
+      });
+    }
+    if (window.SITE_CONFIG.cnpj) {
+      document.querySelectorAll('.footer-legal-cnpj').forEach(el => {
+        el.textContent = window.SITE_CONFIG.cnpj;
+      });
+    }
+
+    // Controle do botão "Entrar" (preparado / oculto por padrão)
+    const loginBtns = document.querySelectorAll('.btn-nav-login');
+    loginBtns.forEach(btn => {
+      if (window.SITE_CONFIG.mostrarBotaoEntrar) {
+        btn.classList.remove('hidden');
+      } else {
+        btn.classList.add('hidden');
+      }
+      if (window.SITE_CONFIG.urlApp) {
+        btn.setAttribute('href', window.SITE_CONFIG.urlApp);
+      }
+    });
+  }
 });
